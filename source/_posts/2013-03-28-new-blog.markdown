@@ -1,0 +1,13 @@
+---
+layout: post
+title: "New Blog"
+date: 2013-03-28 22:14
+comments: true
+categories: [Programming]
+---
+
+<p>Given my new web skills, I decided to switch blogs!  Although, Wordpress was a great way to start my blogging career, I wanted something a little more customizable to allow me to include some of the projects I've been working on lately.  I switched to <a href="http://www.octopress.org">Octopress</a>, which is based on the <a href="https://github.com/mojombo/jekyll">Jekyll blog static-page framework</a>.</p>  I'm now using github to host my blog which also allows free hosting.  I've only just started playing around with what Octopress has to offer, but so far I'm impressed how easy it was to setup.  Overall, it probably took me 3-4 hours to get everything setup and migrated.  I guess the one drawback is I lost the nifty spell checker before I post, so maybe if I'm really bored, I'll work on a javascript or Ruby plugin to catch any errors in the future.
+
+<p>In case you just found my blog, here is the old (lame looking) Wordpress design:</p>
+{% img center /images/posts/new-blog-1.png 800 800 %}
+<p/>
