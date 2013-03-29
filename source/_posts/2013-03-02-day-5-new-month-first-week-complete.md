@@ -9,7 +9,7 @@ It's a new month and my unemployment officially begins today.  Hooray?  Before
 
 Now back to the updates.  With every new month, comes a new "BeastMode" picture, so here it is courtesy of Adam Eversole:
 
-<a href="http://thelonelyworkfromhomer.files.wordpress.com/2013/03/march-beast-mode.jpg"><img class="size-medium wp-image-25 aligncenter" alt="march-beast-mode" src="http://thelonelyworkfromhomer.files.wordpress.com/2013/03/march-beast-mode.jpg?w=225" width="225" height="300" /></a>
+<img class="size-medium wp-image-25 aligncenter" src="/images/posts/march-beast-mode.png?w=225" width="225" height="300" />
 
 &nbsp;
 

@@ -5,7 +5,7 @@ categories: [Personal, Hack Reactor]
 
 ---
 
-[caption id="" align="aligncenter" width="550"]<img alt="" src="http://images.wikia.com/adventuretimewithfinnandjake/images/2/24/Boy-that-escalated-quickly_zps178aa246.jpg" width="550" height="280" /> The only way to describe how I truly feel[/caption]
+<img src="/images/posts/boy-that-escalated-quickly-1.png" width="550" height="280" /> <span class="caption">The only way to describe how I truly feel</span>
 
 <span style="line-height:1.5;">I haven't posted in a while, and that's simply because that meetup I went to last Thursday has snowballed into me actually enrolling in the class.  I guess the title of my blog will be misleading now and I should update it to reflect the fact that for the next 3 months, I'll be coding extensively at this place called </span><a style="line-height:1.5;" title="Hack Reactor Site" href="http://www.hackreactor.com" target="_blank">Hack Reactor</a>.<span style="line-height:1.5;">
 </span>

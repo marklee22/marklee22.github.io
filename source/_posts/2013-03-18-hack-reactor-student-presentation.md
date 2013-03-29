@@ -7,7 +7,7 @@ categories: [Hack Reactor, Programming]
 
 We have student presentations here, where a student gives a 5 minute presentation on something they found interesting that they want to present to the class.  When they were taking volunteers, I had an itch on my eyebrow, which was mistakenly taken as a hand raise.  So now I'm writing up a little excerpt on what I will be presenting later today so I can shamelessly promote my blog.
 
-[caption id="attachment_40" align="aligncenter" width="255"]<a href="http://thelonelyworkfromhomer.files.wordpress.com/2013/03/screen-shot-2013-03-18-at-11-39-54-am.png"><img class=" wp-image-40 " alt="Screen Shot 2013-03-18 at 11.39.54 AM" src="http://thelonelyworkfromhomer.files.wordpress.com/2013/03/screen-shot-2013-03-18-at-11-39-54-am.png?w=255" width="255" height="300" /></a> (Bad Luck Brian)[/caption]
+<img class=" wp-image-40 " src="/images/posts/student-presentation-1.png?w=255" width="255" height="300" /><span class="caption"> (Bad Luck Brian)</span>
 
 The topic of my presentation is <strong>jQuery-menu-aim</strong> <strong>and Helpful Web Resources</strong>.  I know what you're already thinking: "What does that exactly mean?"--good question.
 

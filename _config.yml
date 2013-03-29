@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /blog/atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: marklee22@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #

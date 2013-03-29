@@ -11,4 +11,4 @@ After a quick clean up of my LinkedIn profile and finishing the book, <a href="
 
 Also, thanks to my good friend Adam, I am tracking my days using his "Beast Mode" (the name of the pose) calendar spread.  I think I'll make it a tradition to post every new Beast Mode on the 1st of the month.
 
-<a href="http://thelonelyworkfromhomer.files.wordpress.com/2013/02/img_20130226_114053.jpg"><img class="alignnone size-medium wp-image-14" alt="Feb Beast Mode" src="http://thelonelyworkfromhomer.files.wordpress.com/2013/02/img_20130226_114053.jpg?w=224" width="224" height="300" /></a>
+<img src="/images/posts/feb-beast-mode.png?w=224'" width="224" height="300" />
