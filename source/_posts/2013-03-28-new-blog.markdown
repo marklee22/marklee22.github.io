@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New Blog"
+title: "New Blog!"
 date: 2013-03-28 22:14
 comments: true
 categories: [Programming]

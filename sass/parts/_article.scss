@@ -110,7 +110,7 @@ article{
 			padding-left: 25px;
 			position: relative;
 			&:before{
-				content: "\f040";
+//				content: "\f040";
 				color: $color-gray03;
 				font: 1.3em $font-icon;
 				line-height: 1.6em;
@@ -133,6 +133,12 @@ article{
 				margin-top: 0;
 			}
 		}
+	}
+	li {
+		margin-left: 15px;
+	}
+	.aligncenter {
+		text-align: center;
 	}
 }
 .share{
