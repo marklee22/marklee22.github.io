@@ -2,8 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://marklee22.github.com/blog
-title: Mark Lee's Blog
+url: http://marklee22.github.io
+title: Mark's Blog
+sidebarTitle: markLee === me
 subtitle: My Journey from IT consultant to Full Stack Web Developer
 author: Mark Lee
 simple_search: http://google.com/search
@@ -16,7 +17,7 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /blog/atom.xml
+subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email: marklee22@gmail.com
@@ -26,10 +27,10 @@ email: marklee22@gmail.com
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /blog
+root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: public/blog
+destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
@@ -85,8 +86,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: markleeisme
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
