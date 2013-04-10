@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Nodejs Chat Server"
+title: "Node.js Chat Server"
 date: 2013-04-02 12:43
 comments: true
 categories: [Programming, Hack Reactor]
