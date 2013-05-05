@@ -1,0 +1,32 @@
+---
+layout: post
+title: "MeetMeet"
+date: 2013-04-30 23:51
+comments: true
+categories: [Personal, Hack Reactor, Programming]
+---
+
+Ten days ago, I embarked on my first balls-to-the-wall hacking experience and I'm pretty proud of the outcome.  It's a site I call (for now) "MeetMeet", which can be viewed [here][meetmeet].
+
+{%img center /images/posts/meetmeet.png %}
+
+We were given 4 days to work on our personal project, but over our one week break, I thought it would be best to get a headstart after looking at my list of features I wanted to implement. I think the main lesson I learned is that the term "MVP" does not stand for "MOST valuable product".  It stands for "MINIMUM viable product".  However, I think I have a fully (yet a little buggy) web app built in [Meteor.js][meteor].
+
+#What the app does
+
+This is an idea I've had for a while that I never had time to pursue.  Originally, I actually wanted to make a native iOS app, but am now glad I made a somewhat-responsive web app instead. The amount of functionality built into 10 days is impressive by my standards, and I can only attribute Meteor's intuitive and easy to use framework for it. Enough technical jargon. Let's dive into the details.
+
+Here's how it works (and there's a section on the site explaining this):
+
+1. Create an account
+1. Hook up your Google Calendar and Facebook Friends
+1. Select your meeting preferences
+1. Pick who you want to meet from your Facebook Friends
+1. Let MeetMeet auto schedule events based on 'mutually anonymous agreements' and free time on your schedule
+
+A pretty basic and straightforward process that I can hopefully build more features for. I have declared it an alpha because I've barely had time to test it fully, but from what I can tell, it should work (**knock on wood**).
+
+Anyways, it's 12am now, I just deployed it, and I'm the last one here at Hack Reactor. Feel free to sign up and check it out.
+
+[meteor]: http://www.meteor.com
+[meetmeet]: http://meeetmeet.meteor.com
