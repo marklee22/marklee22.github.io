@@ -5,7 +5,7 @@
 url: http://marklee22.github.io
 title: Mark's Blog
 sidebarTitle: markLee === me
-subtitle: My Journey from IT consultant to Full Stack Web Developer
+subtitle: My Journey from IT consultant to Full Stack Developer
 author: Mark Lee
 simple_search: http://google.com/search
 description:
@@ -17,8 +17,8 @@ description:
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
-subscribe_email:
+# subscribe_rss: /atom.xml
+# subscribe_email:
 # RSS feeds can list your email address if you like
 email: marklee22@gmail.com
 
@@ -51,7 +51,8 @@ titlecase: true       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
-default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+# default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+default_asides: [asides/github.html]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -67,7 +68,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 github_user: marklee22
 github_repo_count: 19
 github_show_profile_link: true
-github_skip_forks: true
+github_skip_forks: false
 
 # Twitter
 twitter_user: Makaleee
@@ -99,3 +100,9 @@ google_analytics_tracking_id: UA-40025559-1
 
 # Facebook Like
 facebook_like: true
+
+# LinkedIn
+linkedin_user: marklee22
+
+# Facebook
+facebook_user: marklee22
