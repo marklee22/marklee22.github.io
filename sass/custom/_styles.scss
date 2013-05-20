@@ -28,6 +28,20 @@ img.float-right {
   display: inline-block;
 }
 
+#header #main-nav ul li a {
+  color: rgb(196, 229, 250);
+  &:hover {
+    color: rgb(172, 89, 0);
+  }
+}
+
+#about {
+  p {
+    line-height: 2em;
+    margin: 20px;
+  }
+}
+
 #projects {
   article {
     h2 {
