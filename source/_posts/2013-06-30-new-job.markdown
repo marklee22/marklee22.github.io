@@ -1,0 +1,19 @@
+---
+layout: post
+title: "New Job! - Slideshare"
+date: 2013-06-30 23:29
+comments: true
+categories: [Personal, Programming, Hack Reactor]
+---
+
+I'm announcing here that I have signed my offer letter and have a new job! Starting July 15th, I will be a Software Engineer for Slideshare/LinkedIn. [Slideshare][slideshare] is an entity within LinkedIn, but their offices are located in LinkedIn's sales office here in local SF. I'm ecstatic and excited about the opportunity as I will be tackling becoming a full stack + DevOps engineer.
+
+<div style="text-align: center;">
+  {%img /images/posts/new_job/slideshare.png 450 126 %}
+  {%img /images/posts/new_job/linkedin_logo.jpeg 450 126 %}
+</div>
+
+Special thanks to everyone, especially [Hack Reactor][hackreactor] for helping me achieve my goal. It's crazy to think 4 months ago when I started this blog that I achieved what I originally set out to do! Now that I have a job, I'll be focusing on programming again and hopefully never have to apply for jobs again in the near future. My duties will include heavy Javascript and Ruby/Rails, with a strong emphasis on testing. So expect a lot of Rails posts in the future!
+
+[hackreactor]: http://hackreactor.com
+[slideshare]: http://slideshare.net
