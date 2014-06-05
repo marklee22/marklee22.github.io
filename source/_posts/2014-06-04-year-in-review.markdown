@@ -4,8 +4,9 @@ title: "Year in Review"
 date: 2014-06-04 19:46:51 -0800
 comments: true
 categories: [Slideshare, Personal, Programming]
+facebook:
+  image: http://markleeis.me/images/social-share.png
 ---
-<meta property="og:image" content="/images/social-share.png"/>
 Wow! It's been a little less than a year since I began my new career as a Software Engineer here at Slideshare. I've been meaning to get around to writing up a blog post about my life in the past few months, but just never got around to it. I spent a lot of time re-adjusting back to my life after graduating Hack Reactor in June last year, and then went 110% to make sure I did my best to not fuck up while I started my new career path into full-time development. *Spoiler alert:* It's been pretty fucking awesome!
 
 ### Life Updates
