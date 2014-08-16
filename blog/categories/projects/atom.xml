@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Projects | Mark's Blog]]></title>
+  <link href="http://markleeis.me/blog/categories/projects/atom.xml" rel="self"/>
+  <link href="http://markleeis.me/"/>
+  <updated>2014-08-16T13:52:52-07:00</updated>
+  <id>http://markleeis.me/</id>
+  <author>
+    <name><![CDATA[Mark Lee]]></name>
+    <email><![CDATA[marklee22@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blackjack: Backbone + CoffeeScript]]></title>
+    <link href="http://markleeis.me/blog/2013/04/08/blackjack-backbone-plus-coffeescript/"/>
+    <updated>2013-04-08T16:09:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/04/08/blackjack-backbone-plus-coffeescript</id>
+    <content type="html"><![CDATA[<p><img class="float-right" src="/images/posts/blackjack/specs.png" width="400" height="360">
+With today&rsquo;s post, I bring to you my first interactive game written entirely in javascript.  As always if you&rsquo;re non-technical, feel free to jump straight to the bottom of this post to see the app.  I really enjoyed this project because I was able to accomplish three things I&rsquo;ve been meaning to spend more time on:</p>
+
+<ul>
+<li>Get more practice with <a href="http://backbonejs.org" title="Backbone.js">Backbone.js</a></li>
+<li>Play around with <a href="http://coffeescript.org/" title="CoffeeScript">CoffeeScript</a></li>
+<li>Develop code using a <a href="http://en.wikipedia.org/wiki/Test-driven_development" title="TDD">test driven strategy</a> (TDD)</li>
+</ul>
+
+
+<h3>TDD</h3>
+
+<p>Testing is a newfound concept for me when it comes to programming, but I am constantly improving my ability to write good test coverage for all my projects here.  For this project specifically, I decided to use <a href="http://pivotal.github.io/jasmine/" title="Jasmine">Jasmine</a> as my testing suite.  I found two things key to writing tests for Backbone:</p>
+
+<ul>
+<li>Learn how spies work.  Seriously, it is the key to the puzzle</li>
+<li>Build my tests from the bottom up, meaning I focus on the lowest level models first and proceed up the model chain</li>
+</ul>
+
+
+<p>What I&rsquo;m finding out here at Hack Reactor is that no one enjoys testing except me.  I think it&rsquo;s one part OCD and one part understanding that it&rsquo;s the agile way.  I feel like despite it doubled my implementation time, it made me think long and hard about how the application should work.  Once I figured out how spies work and where to initialize them, I was quickly moving through additional tests involving triggers and chained function calls.</p>
+
+<h3>CoffeeScript vs Javascript</h3>
+
+<p>In case you&rsquo;ve never heard of CoffeeScript, it is quintessentially what C is to Assembly.  It abstracts the javascript language and provides several helpers or &ldquo;shortcuts&rdquo; that eventually compiles into javascript code.  I think using CoffeeScript or Javascript is simply a matter of taste.  Although I enjoyed writing less lines of code and <em>not</em> having to use semi-colons.  The browser still runs on javascript, and when something breaks, I have to dig through the compiled JS files to backtrace what line of CoffeeScript is failing.  <em>Bottom line though</em>: You should probably be familiar with both.</p>
+
+<p>I definitely see the advantages of writing CoffeeScript, and wouldn&rsquo;t be surprised if more and more companies use it in the future.  I&rsquo;m just not a fan of optional parentheses and replacing &lsquo;this&rsquo; with &lsquo;@&rsquo;.  It doesn&rsquo;t look right to me yet coming from years of coding in C++, Java, and PHP, but over time I could see myself changing my sentiment.</p>
+
+<p>Let&rsquo;s look at a basic example here of the hit() method for a Hand.</p>
+
+<h5>CoffeeScript</h5>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'>  <span class="nv">hit: </span><span class="o">&amp;</span><span class="nx">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">@add</span><span class="p">(</span><span class="nx">@deck</span><span class="p">.</span><span class="nx">pop</span><span class="p">()).</span><span class="nx">last</span><span class="p">()</span> <span class="k">unless</span> <span class="p">(</span><span class="nx">@scores</span><span class="p">().</span><span class="nx">every</span> <span class="p">(</span><span class="nx">score</span><span class="p">)</span> <span class="o">-&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nx">score</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">21</span><span class="p">)</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="nx">code</span><span class="o">&gt;&lt;/</span><span class="nx">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h5>Javascript Equivalent</h5>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">Hand</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hit</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">scores</span><span class="p">().</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">score</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">score</span> <span class="o">&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="mi">21</span><span class="p">;</span>
+</span><span class='line'><span class="p">})))</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">deck</span><span class="p">.</span><span class="nx">pop</span><span class="p">()).</span><span class="nx">last</span><span class="p">();</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>As you can see CoffeeScript is concise, clean, and less characters overall.  I&rsquo;m just not &lsquo;fluent&rsquo; in the language yet, so in my brain I am converting the CoffeeScript to javascript anyways.</p>
+
+<h3>Backbone Models/Collections/Views</h3>
+
+<p>Overall, there are three model classes in play here:</p>
+
+<ol>
+<li> App &ndash; Top level model that controls the game functionality with the player/dealer</li>
+<li> Deck &ndash; Collection of 52 unique Card models</li>
+<li> DiscardPile &ndash; Collection of Card models that is initially empty for holding all previously played cards</li>
+<li> Hand &ndash; Collection of Cards with helper methods like hit, stand, getScore, etc.</li>
+<li> Card &ndash; Base model representing a card (suit and value)</li>
+</ol>
+
+
+<p>Since our app will only display the app, hand, and cards, I only needed View classes for those models.  I feel the hardest part about learning Backbone is to understand what code goes where, and once you engrain the idea that you should avoid logic in views, it becomes much easier to visualize the file structure.</p>
+
+<p>I found testing to be a big help for this project specifically.  Normally, I&rsquo;d make a code change, refresh the web browser, and simulate the user functionality I implemented manually.  With extensive tests, I simply changed that process to verify all my tests are still passing in case I broke something unexpectedly.  Of course at the end, I decided to spend a few hours cleaning up the UX/UI to polish it up.  It&rsquo;s amazing how 1-2 hours of CSS work + images + animations can make something look that much better.  I used to hate doing CSS, but I&rsquo;m starting to grow fond of it as it is the final layer of polish to every application.  I also decided to use sprites for the card images instead of individual images.  It&rsquo;s an interesting concept that I learned reading a blog in <a href="http://reddit.com/r/programming" title="Programming">reddit programming</a> which is a concept I&rsquo;m sure will come in handy in the future!</p>
+
+<h3>Now for the app itself!</h3>
+
+<p>This is a basic Blackjack application.  It does not support <em>betting</em> (unfortunately), <em>splits</em>, or <em>dealer insurance</em>.  I hope you enjoy this and eventually I will release the gist when the repo is public after my program at Hack Reactor is complete.  Check back soon!</p>
+
+<div id="blackjackApp">
+  <script src="/javascripts/posts/blackjack/models/Card.js"></script>
+  <script src="/javascripts/posts/blackjack/models/Hand.js"></script>
+  <script src="/javascripts/posts/blackjack/models/DiscardPile.js"></script>
+  <script src="/javascripts/posts/blackjack/models/Deck.js"></script>
+  <script src="/javascripts/posts/blackjack/models/App.js"></script>
+  <script src="/javascripts/posts/blackjack/views/CardView.js"></script>
+  <script src="/javascripts/posts/blackjack/views/HandView.js"></script>
+  <script src="/javascripts/posts/blackjack/views/AppView.js"></script>
+  <script src="/javascripts/posts/blackjack/main.js"></script>
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

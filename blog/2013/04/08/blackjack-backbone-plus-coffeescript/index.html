@@ -1,0 +1,273 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Blackjack: Backbone + CoffeeScript - Mark's Blog</title>
+	<meta name="author" content="Mark Lee">
+
+	
+	<meta name="description" content="Blackjack: Backbone + CoffeeScript With today&rsquo;s post, I bring to you my first interactive game written entirely in javascript. As always if &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="" rel="alternate" title="Mark's Blog" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://markleeis.me/blog/2013/04/08/blackjack-backbone-plus-coffeescript/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/blackjack/app.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="/stylesheets/animate.css" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/javascripts/libs/underscore.js"></script>
+  <script src="/javascripts/libs/backbone.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Blackjack: Backbone + CoffeeScript" />
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("marklee22@gmail.com") + "?s=160&r=pg' alt='Profile Picture' style='width: 160px;'");
+	</script>
+</div>
+<h1><span class="sidebar-title"><a href="/">markLee === me</a></span></h1>
+<p class="subtitle">My Journey from IT consultant to Full Stack Developer</p>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/resume">Resume</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/about">About Me</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		<a class="facebook" href="http://www.facebook.com/marklee22" title="Facebook">Facebook</a>
+		
+		
+		<a class="google" href="https://plus.google.com/101058688226425085711" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/Makaleee" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/marklee22" title="GitHub">GitHub</a>
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/marklee22">LinkedIn</a>
+		
+		
+		
+		
+		
+	</div>
+</nav>
+<hgroup>
+</hgroup>
+
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Blackjack: Backbone + CoffeeScript</h1>
+	<div class="entry-content" itemprop="articleBody"><p><img class="float-right" src="/images/posts/blackjack/specs.png" width="400" height="360">
+With today&rsquo;s post, I bring to you my first interactive game written entirely in javascript.  As always if you&rsquo;re non-technical, feel free to jump straight to the bottom of this post to see the app.  I really enjoyed this project because I was able to accomplish three things I&rsquo;ve been meaning to spend more time on:</p>
+
+<ul>
+<li>Get more practice with <a href="http://backbonejs.org" title="Backbone.js">Backbone.js</a></li>
+<li>Play around with <a href="http://coffeescript.org/" title="CoffeeScript">CoffeeScript</a></li>
+<li>Develop code using a <a href="http://en.wikipedia.org/wiki/Test-driven_development" title="TDD">test driven strategy</a> (TDD)</li>
+</ul>
+
+
+<h3>TDD</h3>
+
+<p>Testing is a newfound concept for me when it comes to programming, but I am constantly improving my ability to write good test coverage for all my projects here.  For this project specifically, I decided to use <a href="http://pivotal.github.io/jasmine/" title="Jasmine">Jasmine</a> as my testing suite.  I found two things key to writing tests for Backbone:</p>
+
+<ul>
+<li>Learn how spies work.  Seriously, it is the key to the puzzle</li>
+<li>Build my tests from the bottom up, meaning I focus on the lowest level models first and proceed up the model chain</li>
+</ul>
+
+
+<p>What I&rsquo;m finding out here at Hack Reactor is that no one enjoys testing except me.  I think it&rsquo;s one part OCD and one part understanding that it&rsquo;s the agile way.  I feel like despite it doubled my implementation time, it made me think long and hard about how the application should work.  Once I figured out how spies work and where to initialize them, I was quickly moving through additional tests involving triggers and chained function calls.</p>
+
+<h3>CoffeeScript vs Javascript</h3>
+
+<p>In case you&rsquo;ve never heard of CoffeeScript, it is quintessentially what C is to Assembly.  It abstracts the javascript language and provides several helpers or &ldquo;shortcuts&rdquo; that eventually compiles into javascript code.  I think using CoffeeScript or Javascript is simply a matter of taste.  Although I enjoyed writing less lines of code and <em>not</em> having to use semi-colons.  The browser still runs on javascript, and when something breaks, I have to dig through the compiled JS files to backtrace what line of CoffeeScript is failing.  <em>Bottom line though</em>: You should probably be familiar with both.</p>
+
+<p>I definitely see the advantages of writing CoffeeScript, and wouldn&rsquo;t be surprised if more and more companies use it in the future.  I&rsquo;m just not a fan of optional parentheses and replacing &lsquo;this&rsquo; with &lsquo;@&rsquo;.  It doesn&rsquo;t look right to me yet coming from years of coding in C++, Java, and PHP, but over time I could see myself changing my sentiment.</p>
+
+<p>Let&rsquo;s look at a basic example here of the hit() method for a Hand.</p>
+
+<h5>CoffeeScript</h5>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='coffeescript'><span class='line'>  <span class="nv">hit: </span><span class="nf">-&gt;</span>
+</span><span class='line'>    <span class="nx">@add</span><span class="p">(</span><span class="nx">@deck</span><span class="p">.</span><span class="nx">pop</span><span class="p">()).</span><span class="nx">last</span><span class="p">()</span> <span class="k">unless</span> <span class="p">(</span><span class="nx">@scores</span><span class="p">().</span><span class="nx">every</span> <span class="nf">(score) -&gt;</span> <span class="nx">score</span> <span class="o">&gt;</span> <span class="mi">21</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>Javascript Equivalent</h5>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>  <span class="nx">Hand</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hit</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">scores</span><span class="p">().</span><span class="nx">every</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">score</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nx">score</span> <span class="o">&gt;</span> <span class="mi">21</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">})))</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">deck</span><span class="p">.</span><span class="nx">pop</span><span class="p">()).</span><span class="nx">last</span><span class="p">();</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see CoffeeScript is concise, clean, and less characters overall.  I&rsquo;m just not &lsquo;fluent&rsquo; in the language yet, so in my brain I am converting the CoffeeScript to javascript anyways.</p>
+
+<h3>Backbone Models/Collections/Views</h3>
+
+<p>Overall, there are three model classes in play here:</p>
+
+<ol>
+<li> App &ndash; Top level model that controls the game functionality with the player/dealer</li>
+<li> Deck &ndash; Collection of 52 unique Card models</li>
+<li> DiscardPile &ndash; Collection of Card models that is initially empty for holding all previously played cards</li>
+<li> Hand &ndash; Collection of Cards with helper methods like hit, stand, getScore, etc.</li>
+<li> Card &ndash; Base model representing a card (suit and value)</li>
+</ol>
+
+
+<p>Since our app will only display the app, hand, and cards, I only needed View classes for those models.  I feel the hardest part about learning Backbone is to understand what code goes where, and once you engrain the idea that you should avoid logic in views, it becomes much easier to visualize the file structure.</p>
+
+<p>I found testing to be a big help for this project specifically.  Normally, I&rsquo;d make a code change, refresh the web browser, and simulate the user functionality I implemented manually.  With extensive tests, I simply changed that process to verify all my tests are still passing in case I broke something unexpectedly.  Of course at the end, I decided to spend a few hours cleaning up the UX/UI to polish it up.  It&rsquo;s amazing how 1-2 hours of CSS work + images + animations can make something look that much better.  I used to hate doing CSS, but I&rsquo;m starting to grow fond of it as it is the final layer of polish to every application.  I also decided to use sprites for the card images instead of individual images.  It&rsquo;s an interesting concept that I learned reading a blog in <a href="http://reddit.com/r/programming" title="Programming">reddit programming</a> which is a concept I&rsquo;m sure will come in handy in the future!</p>
+
+<h3>Now for the app itself!</h3>
+
+<p>This is a basic Blackjack application.  It does not support <em>betting</em> (unfortunately), <em>splits</em>, or <em>dealer insurance</em>.  I hope you enjoy this and eventually I will release the gist when the repo is public after my program at Hack Reactor is complete.  Check back soon!</p>
+
+<div id="blackjackApp">
+  <script src="/javascripts/posts/blackjack/models/Card.js"></script>
+  <script src="/javascripts/posts/blackjack/models/Hand.js"></script>
+  <script src="/javascripts/posts/blackjack/models/DiscardPile.js"></script>
+  <script src="/javascripts/posts/blackjack/models/Deck.js"></script>
+  <script src="/javascripts/posts/blackjack/models/App.js"></script>
+  <script src="/javascripts/posts/blackjack/views/CardView.js"></script>
+  <script src="/javascripts/posts/blackjack/views/HandView.js"></script>
+  <script src="/javascripts/posts/blackjack/views/AppView.js"></script>
+  <script src="/javascripts/posts/blackjack/main.js"></script>
+</div>
+
+
+
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Mark Lee -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'markleeisme';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://markleeis.me/blog/2013/04/08/blackjack-backbone-plus-coffeescript/';
+        var disqus_url = 'http://markleeis.me/blog/2013/04/08/blackjack-backbone-plus-coffeescript/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-40025559-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

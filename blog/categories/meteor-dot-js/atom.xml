@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Meteor.js | Mark's Blog]]></title>
+  <link href="http://markleeis.me/blog/categories/meteor-dot-js/atom.xml" rel="self"/>
+  <link href="http://markleeis.me/"/>
+  <updated>2014-08-16T13:52:52-07:00</updated>
+  <id>http://markleeis.me/</id>
+  <author>
+    <name><![CDATA[Mark Lee]]></name>
+    <email><![CDATA[marklee22@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor.js and Yelp OAuth Search]]></title>
+    <link href="http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/"/>
+    <updated>2013-05-22T18:07:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search</id>
+    <content type="html"><![CDATA[<p>Revisiting my MeetMeet web app, I thought I&rsquo;d share the code snippet for configuring Meteor.js to work with Yelp&rsquo;s search API. Meteor is still new and the smart packages are still being churned out every day, but one does not exist for Yelp search.</p>
+
+<h4>The Pre-Reqs</h4>
+
+<p>First things first, you&rsquo;ll need a Yelp developer account first, which can be found <a href="http://www.yelp.com/developers/documentation">here</a>. Once you sign up and get API keys, make sure you take down the following:</p>
+
+<ul>
+<li>Consumer Key</li>
+<li>Consumer Secret</li>
+<li>Token</li>
+<li>Token Secret</li>
+</ul>
+
+
+<p>Then login to your mongo database with <code>meteor mongo</code> and run the following statement:</p>
+
+<p><code>
+Accounts.loginServiceConfiguration.remove({service: "yelp"});
+Accounts.loginServiceConfiguration.insert({
+  service: "yelp",
+  consumerKey: "YOUR_KEY_HERE",
+  consumerSecret: "YOUR_SECRET_HERE",
+  accessToken: "YOUR_TOKEN_HERE",
+  accessTokenSecret: "YOUR_TOKEN_SECRET"
+});
+</code></p>
+
+<p>This inserts the yelp service into the same collection as the other Meteor OAuth helpers.  Nothing gets stored on the user account for Yelp, but it&rsquo;s not good practice to have your credentials in source code.</p>
+
+<h4>The Code</h4>
+
+<p>I had to utilize Meteor&rsquo;s built in OAuth1 helpers and a little trial and error, but the finished code is below:</p>
+
+<p>```javascript
+yelpQuery: function(search, isCategory, longitude, latitude) {
+  console.log(&lsquo;Yelp search for userId: &rsquo; + this.userId + &lsquo;(search, isCategory, lng, lat) with vals (&rsquo;, search, isCategory, longitude, latitude, &lsquo;)&rsquo;);</p>
+
+<p>  // Query OAUTH credentials (these are set manually)
+  var auth = Accounts.loginServiceConfiguration.findOne({service: &lsquo;yelp&rsquo;});</p>
+
+<p>  // Add auth signature manually
+  auth[&lsquo;serviceProvider&rsquo;] = { signatureMethod: &ldquo;HMAC-SHA1&rdquo; };</p>
+
+<p>  var accessor = {</p>
+
+<pre><code>consumerSecret: auth.consumerSecret,
+tokenSecret: auth.accessTokenSecret
+</code></pre>
+
+<p>  },
+  parameters = {};</p>
+
+<p>  // Search term or categories query
+  if(isCategory)</p>
+
+<pre><code>parameters.category_filter = search;
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>parameters.term = search;
+</code></pre>
+
+<p>  // Set lat, lon location, if available (SF is default location)
+  if(longitude &amp;&amp; latitude)</p>
+
+<pre><code>parameters.ll = latitude + ',' + longitude;
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>parameters.location = 'San+Francisco';
+</code></pre>
+
+<p>  // Results limited to 5
+  parameters.limit = 5;</p>
+
+<p>  // Configure OAUTH parameters for REST call
+  parameters.oauth_consumer_key = auth.consumerKey;
+  parameters.oauth_consumer_secret = auth.consumerSecret;
+  parameters.oauth_token = auth.accessToken;
+  parameters.oauth_signature_method = auth.serviceProvider.signatureMethod;</p>
+
+<p>  // Create OAUTH1 headers to make request to Yelp API
+  var oauthBinding = new OAuth1Binding(auth.consumerKey, auth.consumerSecret, &lsquo;<a href="http://api.yelp.com/v2/search">http://api.yelp.com/v2/search</a>&rsquo;);
+  oauthBinding.accessTokenSecret = auth.accessTokenSecret;
+  var headers = oauthBinding._buildHeader();</p>
+
+<p>  // Return data results only
+  return oauthBinding._call(&lsquo;GET&rsquo;, &lsquo;<a href="http://api.yelp.com/v2/search">http://api.yelp.com/v2/search</a>&rsquo;, headers, parameters).data;
+}
+```</p>
+
+<h4>Input Parameters</h4>
+
+<ul>
+<li>search: Search term or category names</li>
+<li>isCategory: Boolean stating whether &lsquo;search&rsquo; parameter is a category</li>
+<li>longitude and latitude: Latitude and Longitude of user&rsquo;s location (optional)
+
+<ul>
+<li>Default location is statically set to San Francisco</li>
+</ul>
+</li>
+</ul>
+
+
+<p>You can use Yelp&rsquo;s provided sample program to test your API credentials work, but if everything works, you&rsquo;ll get back 5 yelp businesses as a javascript object.</p>
+
+<p><em>SOON TO COME</em>: An mrt package!</p>
+]]></content>
+  </entry>
+  
+</feed>
