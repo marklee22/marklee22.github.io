@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Hack Reactor | Mark's Blog]]></title>
+  <link href="http://markleeis.me/blog/categories/hack-reactor/atom.xml" rel="self"/>
+  <link href="http://markleeis.me/"/>
+  <updated>2014-08-16T13:52:52-07:00</updated>
+  <id>http://markleeis.me/</id>
+  <author>
+    <name><![CDATA[Mark Lee]]></name>
+    <email><![CDATA[marklee22@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Job! - Slideshare]]></title>
+    <link href="http://markleeis.me/blog/2013/06/30/new-job/"/>
+    <updated>2013-06-30T23:29:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/06/30/new-job</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m announcing here that I have signed my offer letter and have a new job! Starting July 15th, I will be a Software Engineer for Slideshare/LinkedIn. <a href="http://slideshare.net">Slideshare</a> is an entity within LinkedIn, but their offices are located in LinkedIn&rsquo;s sales office here in local SF. I&rsquo;m ecstatic and excited about the opportunity as I will be tackling becoming a full stack + DevOps engineer.</p>
+
+<div style="text-align: center;">
+  <img src="/images/posts/new_job/slideshare.png" width="450" height="126">
+  <img src="/images/posts/new_job/linkedin_logo.jpeg" width="450" height="126">
+</div>
+
+
+<p>Special thanks to everyone, especially <a href="http://hackreactor.com">Hack Reactor</a> for helping me achieve my goal. It&rsquo;s crazy to think 4 months ago when I started this blog that I achieved what I originally set out to do! Now that I have a job, I&rsquo;ll be focusing on programming again and hopefully never have to apply for jobs again in the near future. My duties will include heavy Javascript and Ruby/Rails, with a strong emphasis on testing. So expect a lot of Rails posts in the future!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Software Engineer Interview Process]]></title>
+    <link href="http://markleeis.me/blog/2013/06/24/the-interview-process/"/>
+    <updated>2013-06-24T14:37:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/06/24/the-interview-process</id>
+    <content type="html"><![CDATA[<p>After going through so many interviews, I decided to blog about what the interviewing process is like for becoming a developer in this day and age. If you refer to my last post, I gave you the percentages of all the stages of each interview. Overall, I went through 30+ applications, 20 recruiter calls, 15-20 phone screens, and 11 on-site interviews. Clearly I am not great at interviewing as I received four offers total, but I do feel like I now understand the dos and don'ts of the interview process as a whole.</p>
+
+<h3>Stage 1: The Resume</h3>
+
+<p>The first step is to take your resume. Burn it. Then build it from the ashes. I&rsquo;m joking, but old Word Doc resumes are out. &ldquo;Adobe In-design&rdquo; templates are in. If you&rsquo;re not ready to pay for In-Design, there is an open-source alternative called <a href="http://scribus.net">scribus</a>, which I used to make my resume <a href="/resume">here</a>. I took two things into account when designing my resume:</p>
+
+<ol>
+<li>Attention spans are short. Less is more.</li>
+<li>Seeing something different will probably stand out.</li>
+</ol>
+
+
+<p>Hack Reactor provides a lot of advice when creating resumes given the fact a lot of people don&rsquo;t have a technical work background related to programming. Luckily, I had a formal education and a job that performed technical duties, but readability was my main focus. Using my resume as an example, it was structured to have the stronger sections at the beginning and end (skills &amp; education), and then the weaker sections (work experience) in between. Some may argue my job is more important, but given the fact I did not do much programming on the job, I felt it less applicable, so YMMV.</p>
+
+<h3>Stage 2: The Application</h3>
+
+<p>This is straight forward. You want to send out as many applications as possible. At first I regretted doing this, but as most things go, things don&rsquo;t always pan out for your first or second choice and having a backup is a good idea. I noticed cover letters were optional most of the time, but if there&rsquo;s a box for it, <strong>always put a cover letter</strong>. I used a generic cover letter template that included the following:</p>
+
+<ol>
+<li>A brief intro of why I was interested in the position (1-2 sentences)</li>
+<li>A brief description of my skills and previous work experience/school (3-4 sentences)</li>
+<li>Links to my current projects I&rsquo;ve been working on</li>
+<li>A note for them to refer to my resume for a list of my skills</li>
+</ol>
+
+
+<p>What you have to realize here is that engineers (unless you&rsquo;re applying to startups) are not the first person to read your resume. It&rsquo;s a non-technical resource, so they are looking for reasons to filter you out, so don&rsquo;t give them any.</p>
+
+<h3>Stage 3: The Recruiter Call</h3>
+
+<p>Depending on the size of the company, they may not have recruiters fielding this call, or may skip this call entirely. It&rsquo;s sole purpose is for them to weed you out. Now, what I&rsquo;m about to say is not indicative of what I did, but you could literally lie about or inflate your background/skills here. What I mean by this is the sole point here is to <strong>sell yourself to someone non-technical</strong>. They are gauging your background by looking for keywords and seeing whether or not you&rsquo;d be a good culture fit. Luckily for me, I&rsquo;ve had 5 years of consulting background where I was on the phone constantly, so I&rsquo;ve had some practice.</p>
+
+<p>Overall, sell yourself, but still keep it honest. Just don&rsquo;t sell yourself short or speak negatively about yourself!</p>
+
+<h3>Stage 4: The Phone Screen</h3>
+
+<p>The purpose of the phone screen is to arrange a conversation between yourself and an engineer. The main purpose of this call is to gauge a candidate&rsquo;s technical knowledge by having an engineer ask basic questions that every ____ engineer should know. The format is pretty straightforward. You can expect a 45-60 minute phone call, and possibly a second one given the size of the company.</p>
+
+<p>The format is:</p>
+
+<ol>
+<li>Introductions for both parties</li>
+<li>Verbal questions from the engineer asking to describe simple web things that EVERY web developer should know</li>
+<li>1-4 coding problems that are domain specific (algorithms, data structures, CSS, javascript, etc.)</li>
+<li>A period to ask questions about the job/company</li>
+</ol>
+
+
+<p>This stage is heavy technically and less about selling yourself. Obviously, you&rsquo;ll want to ask some interesting questions at the end to show you&rsquo;re interested, but I&rsquo;m assuming that is obvious.</p>
+
+<h3>Stage 5: The Take Home Problem</h3>
+
+<p>This stage could be substituted for stage 4 or given in addition. It&rsquo;s what it sounds like though. An employer gives you a problem to code up in the language of your choice and submit it upon completion. These are usually projects ranging from 3-8 hours of work, and is pretty straight forward. A lot of times, the solutions can be found somewhere on the web, but it&rsquo;s still best to do it from scratch.</p>
+
+<h3>Stage 6: The On-Site Interview</h3>
+
+<p>Congratulations! You&rsquo;ve made it to the illustrious on-site interview. I could write an entire separate blog post about the on-site interview and how I don&rsquo;t agree with it&rsquo;s structure. However, there&rsquo;s a good chance, most of my biased opinion is based on the bitterness that I was not very good at these. Here&rsquo;s what I think will help calm your nerves about on-site interviews. They are simply evaluating two things: <strong>1) How you think 2) Are you a good culture fit.</strong></p>
+
+<p>The format is pretty straight forward. It&rsquo;s anywhere from 3-6 hours. You meet the team and have several 45-60 minute sessions with 1-3 people (usually just 1) where you chat, whiteboard, and/or pair program problems together. Some interviewers are really good and some are really bad. What you need to focus on is your plan of attack and that&rsquo;s what I&rsquo;m going to write about.</p>
+
+<p>What you should do when you whiteboard:</p>
+
+<ol>
+<li>Take your time and think about it before you write anything on the board</li>
+<li>Draw a diagram of how your solution should work</li>
+<li>Figure out the edge cases first so you can plan accordingly</li>
+<li>Write out pseudocode so your interviewer knows what you&rsquo;re thinking</li>
+<li>Write the actual code carefully</li>
+<li>Refactor your code, if possible</li>
+</ol>
+
+
+<p>If your interviewer is good, he/she will help you along the way. If they don&rsquo;t and you don&rsquo;t know the answer, don&rsquo;t say &ldquo;I don&rsquo;t know&rdquo;. Literally, just sit there in silence and think or say you would normally use google.</p>
+
+<p>Overall, it&rsquo;s not about whether you get the right answer or not. It&rsquo;s all about the process you use to get your solution and whether you have a structured approach. Programming is very structured profession with a lot of semantics that need to be followed, so just throwing shit at the board and hoping it will stick is probably the worst thing you could do. And I definitely did that a few times just to say something to break the silence. Basically&hellip;don&rsquo;t do that and instead try to follow the steps I outlined above.</p>
+
+<p>Best of luck, and feel free to email me if you have any other questions.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Meteor.js and Yelp OAuth Search]]></title>
+    <link href="http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/"/>
+    <updated>2013-05-22T18:07:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search</id>
+    <content type="html"><![CDATA[<p>Revisiting my MeetMeet web app, I thought I&rsquo;d share the code snippet for configuring Meteor.js to work with Yelp&rsquo;s search API. Meteor is still new and the smart packages are still being churned out every day, but one does not exist for Yelp search.</p>
+
+<h4>The Pre-Reqs</h4>
+
+<p>First things first, you&rsquo;ll need a Yelp developer account first, which can be found <a href="http://www.yelp.com/developers/documentation">here</a>. Once you sign up and get API keys, make sure you take down the following:</p>
+
+<ul>
+<li>Consumer Key</li>
+<li>Consumer Secret</li>
+<li>Token</li>
+<li>Token Secret</li>
+</ul>
+
+
+<p>Then login to your mongo database with <code>meteor mongo</code> and run the following statement:</p>
+
+<p><code>
+Accounts.loginServiceConfiguration.remove({service: "yelp"});
+Accounts.loginServiceConfiguration.insert({
+  service: "yelp",
+  consumerKey: "YOUR_KEY_HERE",
+  consumerSecret: "YOUR_SECRET_HERE",
+  accessToken: "YOUR_TOKEN_HERE",
+  accessTokenSecret: "YOUR_TOKEN_SECRET"
+});
+</code></p>
+
+<p>This inserts the yelp service into the same collection as the other Meteor OAuth helpers.  Nothing gets stored on the user account for Yelp, but it&rsquo;s not good practice to have your credentials in source code.</p>
+
+<h4>The Code</h4>
+
+<p>I had to utilize Meteor&rsquo;s built in OAuth1 helpers and a little trial and error, but the finished code is below:</p>
+
+<p>```javascript
+yelpQuery: function(search, isCategory, longitude, latitude) {
+  console.log(&lsquo;Yelp search for userId: &rsquo; + this.userId + &lsquo;(search, isCategory, lng, lat) with vals (&rsquo;, search, isCategory, longitude, latitude, &lsquo;)&rsquo;);</p>
+
+<p>  // Query OAUTH credentials (these are set manually)
+  var auth = Accounts.loginServiceConfiguration.findOne({service: &lsquo;yelp&rsquo;});</p>
+
+<p>  // Add auth signature manually
+  auth[&lsquo;serviceProvider&rsquo;] = { signatureMethod: &ldquo;HMAC-SHA1&rdquo; };</p>
+
+<p>  var accessor = {</p>
+
+<pre><code>consumerSecret: auth.consumerSecret,
+tokenSecret: auth.accessTokenSecret
+</code></pre>
+
+<p>  },
+  parameters = {};</p>
+
+<p>  // Search term or categories query
+  if(isCategory)</p>
+
+<pre><code>parameters.category_filter = search;
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>parameters.term = search;
+</code></pre>
+
+<p>  // Set lat, lon location, if available (SF is default location)
+  if(longitude &amp;&amp; latitude)</p>
+
+<pre><code>parameters.ll = latitude + ',' + longitude;
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>parameters.location = 'San+Francisco';
+</code></pre>
+
+<p>  // Results limited to 5
+  parameters.limit = 5;</p>
+
+<p>  // Configure OAUTH parameters for REST call
+  parameters.oauth_consumer_key = auth.consumerKey;
+  parameters.oauth_consumer_secret = auth.consumerSecret;
+  parameters.oauth_token = auth.accessToken;
+  parameters.oauth_signature_method = auth.serviceProvider.signatureMethod;</p>
+
+<p>  // Create OAUTH1 headers to make request to Yelp API
+  var oauthBinding = new OAuth1Binding(auth.consumerKey, auth.consumerSecret, &lsquo;<a href="http://api.yelp.com/v2/search">http://api.yelp.com/v2/search</a>&rsquo;);
+  oauthBinding.accessTokenSecret = auth.accessTokenSecret;
+  var headers = oauthBinding._buildHeader();</p>
+
+<p>  // Return data results only
+  return oauthBinding._call(&lsquo;GET&rsquo;, &lsquo;<a href="http://api.yelp.com/v2/search">http://api.yelp.com/v2/search</a>&rsquo;, headers, parameters).data;
+}
+```</p>
+
+<h4>Input Parameters</h4>
+
+<ul>
+<li>search: Search term or category names</li>
+<li>isCategory: Boolean stating whether &lsquo;search&rsquo; parameter is a category</li>
+<li>longitude and latitude: Latitude and Longitude of user&rsquo;s location (optional)
+
+<ul>
+<li>Default location is statically set to San Francisco</li>
+</ul>
+</li>
+</ul>
+
+
+<p>You can use Yelp&rsquo;s provided sample program to test your API credentials work, but if everything works, you&rsquo;ll get back 5 yelp businesses as a javascript object.</p>
+
+<p><em>SOON TO COME</em>: An mrt package!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Dreaded Job Search]]></title>
+    <link href="http://markleeis.me/blog/2013/05/20/the-dreaded-job-search/"/>
+    <updated>2013-05-20T11:21:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/05/20/the-dreaded-job-search</id>
+    <content type="html"><![CDATA[<h3>The Serious Side</h3>
+
+<p>Well, the day is finally upon us here at Hack Reactor. The dreaded job search! Dun dun dun dunnnnn.</p>
+
+<p><img class="center <a" src="href="http://www.jvskc.org/UserFiles/Image/KeyboardFindJob.JPg">http://www.jvskc.org/UserFiles/Image/KeyboardFindJob.JPg</a>" width="400" height="400"></p>
+
+<p>It&rsquo;s funny how it felt like only yesterday I couldn&rsquo;t wait for this day to come. Now that it&rsquo;s here, I am overwhelmed by how many companies are out there looking for good engineers. Rather than start the shotgun approach of applying to as many companies as possible, I&rsquo;ve been spending the past few days cleaning up my blog and projects in preparation for &ldquo;Hiring Day&rdquo; this Thursday.</p>
+
+<p>For the 25% returning visitor traffic (according to Google Analytics), you may/may not notice there are three (YES! Three!) new links in the sidebar.</p>
+
+<ul>
+<li><a href="http://markleeis.me/resume">Resume</a></li>
+<li><a href="http://markleeis.me/projects">Projects</a></li>
+<li>And <a href="http://markleeis.me/about">About Me</a></li>
+</ul>
+
+
+<p>I felt like it was time to put myself out there in case potential employers were interested in hiring me.</p>
+
+<h3>The Hilarious Side</h3>
+
+<p>Earlier last week, one of the co-founders of Hack Reactor sent out an email to us to discourage us from applying to jobs. I&rsquo;m not going to include the entire email, but the email chain went like so:</p>
+
+<p><img class="center" src="/images/posts/job_search/shawn_email.png"></p>
+
+<p>And my response:</p>
+
+<p><img class="center" src="/images/posts/job_search/mark_email.png"></p>
+
+<p>I received many accolades from my colleagues for this. But in all seriousness, it&rsquo;s probably time to stop the jokes and start taking things a <em>little</em> bit more serious.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My First Hackathon]]></title>
+    <link href="http://markleeis.me/blog/2013/05/05/my-first-hackathon/"/>
+    <updated>2013-05-05T14:43:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/05/05/my-first-hackathon</id>
+    <content type="html"><![CDATA[<p>This weekend, we took some time off from the regular day-to-day and all went to a Hackathon called <a href="http://angelhack.com/">Angel Hack</a>. I went in as a team of two with my classmate Philip, and our idea was to create a random recipe generator that integrated with Instagram. We felt that our idea was simple enough to finish in 24 hours, as well as, creative enough to distinguish our product from the other apps generated in the past.</p>
+
+<p><img class="center" src="/images/posts/angelhack/RecipeGram-mock.png" width="300" height="150">
+<span class="caption text-center">Our whiteboard mocks the night before</span></p>
+
+<h3>Tech Stack</h3>
+
+<p>Due to time restraints, resource limitations, and it being our first Hackathon, we chose <a href="http://meteor.com/">Meteor.js</a>. Both Philip and I were familiar with Meteor and the single page app was necessary if we were going to build a mobile site.</p>
+
+<h3>The Beginning</h3>
+
+<p>We showed up at 9am at Yammer&rsquo;s HQ on 9th and Market. The building is also Twitter&rsquo;s HQ and it&rsquo;s clear that Twitter isn&rsquo;t the only one balling in that building. The first thought that came to my mind upon entering was A) What does Yammer do? B) How the hell do they make this much money?</p>
+
+<p>There&rsquo;s a mingle session where sponsors setup booths to encourage you to use their services. After briefly walking around and talking to the various sponsors about their APIs and listening to the prizes they had to offer, we decided to change our plan and use <a href="http://www.pearson.com/">Pearson&rsquo;s</a> API. However, shortly after going down that road, we scrapped it and switched back to <a href="http://www.yummly.com/">Yummly</a>. Philip was front-end and I was back-end, and we collaborated throughout the afternoon developing side-by-side.</p>
+
+<h3>The Middle</h3>
+
+<p>Around 8pm, we ran into a brick wall with our original idea. We had all our integrations working and pretty much had a finished product without styling, but the Instagram search capabilities were lacking what we wanted to do. To give you an example, say you were randomly given the recipe &ldquo;Amish Breakfast Casserole&rdquo;. NO ONE on Instagram tags their photo with &ldquo;#AmishBreakfastCasserole&rdquo; unfortunately, and there isn&rsquo;t a way to perform a Google-like image search using their API.</p>
+
+<p>We quickly brainstormed for an alternative and thought we came up with our savior: <em>Search for each word and create an Instagram picture-like recipe</em>. For example, find the most popular picture for the terms &ldquo;Amish&rdquo;, &ldquo;Breakfast&rdquo;, and &ldquo;Casserole&rdquo; separately and display each one below the recipe. Once again Instagram&rsquo;s API search capabilities fucked us and is only capable of returning recent photos instead of most popular photos for a tag. Although some of the photos made sense (and were somewhat humorous), some 12 year old girl who tagged her photo with a million hashtags ruined our search algorithm.</p>
+
+<h3>The End</h3>
+
+<p>The good news is we got to go home and sleep in our own beds. The bad news is we scrapped our idea and decided not to submit it for presentation. I will however, show you the screenshots of our stopping point below and the code can be found <a href="http://github.com/marklee22/recipeGram">here</a>.</p>
+
+<div class="center inline-block">
+<img src="/images/posts/angelhack/RecipeGram-home.png" width="300" height="150">
+<img src="/images/posts/angelhack/RecipeGram-recipe.png" width="300" height="150">
+<img src="/images/posts/angelhack/RecipeGram-instagram.png" width="300" height="150">
+<span class="caption text-center">Our actual screens</span>
+</div>
+
+
+<p>As you can see, we didn&rsquo;t style the application, but would have made it look nicer if we decided to present instead.</p>
+]]></content>
+  </entry>
+  
+</feed>

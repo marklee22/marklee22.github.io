@@ -1,0 +1,338 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Node.js Chat Server - Mark's Blog</title>
+	<meta name="author" content="Mark Lee">
+
+	
+	<meta name="description" content="Node.js Chat Server Today I bring to you my first web interactive project that I call &#8220;ChatBot&#8221;. This is an application that I built &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="" rel="alternate" title="Mark's Blog" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://markleeis.me/blog/2013/04/02/nodejs-chat-server/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/blackjack/app.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="/stylesheets/animate.css" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/javascripts/libs/underscore.js"></script>
+  <script src="/javascripts/libs/backbone.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Node.js Chat Server" />
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("marklee22@gmail.com") + "?s=160&r=pg' alt='Profile Picture' style='width: 160px;'");
+	</script>
+</div>
+<h1><span class="sidebar-title"><a href="/">markLee === me</a></span></h1>
+<p class="subtitle">My Journey from IT consultant to Full Stack Developer</p>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/resume">Resume</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/about">About Me</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		<a class="facebook" href="http://www.facebook.com/marklee22" title="Facebook">Facebook</a>
+		
+		
+		<a class="google" href="https://plus.google.com/101058688226425085711" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/Makaleee" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/marklee22" title="GitHub">GitHub</a>
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/marklee22">LinkedIn</a>
+		
+		
+		
+		
+		
+	</div>
+</nav>
+<hgroup>
+</hgroup>
+
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Node.js Chat Server</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Today I bring to you my first web interactive project that I call &#8220;ChatBot&#8221;.  This is an application that I built from the ground up using Javascript/jQuery/ajax on the front-end, and <a href="http://nodejs.org/">Node.js</a> on the backend.  Using the free and easy-to-use hosting platform <a href="heroku.com">Heroku</a>, you can browse to my web app right now <a class="big" href="http://infinite-caverns-3250.herokuapp.com/">here!</a></p>
+
+
+<p><img class="center" src="/images/posts/chatbot-1.png" width="500" height="500"></p>
+
+<h3>So How Does it Work (from a technical standpoint)?</h3>
+
+
+<ol>
+  <li>A user browses to the website and subsequently submits an HTTP request</li>
+  <li>Node server processes request and serves up HTML/JS/CSS pages</li>
+  <li>jQuery/Javascript binds event handlers and callbacks to various DOM nodes and actions</li>
+  <li>Using AJAX, Javascript periodically polls the server for new messages</li>
+</ol>
+
+
+<h3>Alright Mark, but what about for all us non-programmers?</h3>
+
+
+<p>Right.  The features of what I implemented.  Basically, this is the next GoogleTalk in the making&#8230;  Well, not really, but it was a great project for learning more about ajax, Node.js, and the client-server programming paradigm.  A couple features that I implemented:</p>
+
+
+<ul>
+  <li>Room and Friend list updates dynamically with who has submitted chats</li>
+  <li>Multiple chat rooms are supported, however, it has to be run manually (for now) by browsing to a url like http://infinite-caverns-3250.herokuapp.com/classes/&lt;roomName&gt;</li>
+  <li>Chat room filtering of messages</li>
+  <li>&#8220;Friend list&#8221; highlighting</li>
+  <li>And of course, the ability to chat with others over the web</li>
+</ul>
+
+
+<p>Here is a small snippet of the client side send message function:</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">sendMessage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">message</span><span class="p">,</span> <span class="nx">roomname</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// Construct the message option to send to the server</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="s1">&#39;username&#39;</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">username</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;text&#39;</span><span class="o">:</span> <span class="nx">message</span><span class="p">,</span>
+</span><span class='line'>    <span class="s1">&#39;roomname&#39;</span><span class="o">:</span> <span class="nx">roomname</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Send the message to the server via ajax</span>
+</span><span class='line'>  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span> <span class="o">+</span> <span class="s1">&#39;/classes/messages&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">data</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;POST ERROR!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;POST SUCCESS!&#39;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p>Then on the server-side, I have a request handler function that handles JSON POST requests:</p>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">handleRequest</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">headers</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">statusCode</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="nx">retData</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">urlPath</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;url&#39;</span><span class="p">).</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">).</span><span class="nx">path</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="nx">urlPath</span> <span class="o">===</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">statusCode</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">headers</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;text/html&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">retData</span> <span class="o">=</span> <span class="nx">ejs</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">indexTemplate</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">method</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">statusCode</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+</span><span class='line'>      <span class="nx">retData</span> <span class="o">=</span> <span class="s2">&quot;\n&quot;</span><span class="p">;</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// Buffer the post request&#39;s data</span>
+</span><span class='line'>      <span class="nx">request</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">data</span> <span class="o">+=</span> <span class="nx">chunk</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="c1">// Process request now that the request has been completed</span>
+</span><span class='line'>      <span class="nx">request</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span><span class='line'>        <span class="c1">// console.log(&#39;New Message: &#39;,message);</span>
+</span><span class='line'>        <span class="c1">// Only maintain 20 messages</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">messages</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>          <span class="nx">messages</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="nx">message</span><span class="p">[</span><span class="s1">&#39;createdAt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">message</span><span class="p">[</span><span class="s1">&#39;updatedAt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">messages</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+</span><span class='line'>        <span class="c1">// console.log(messages);</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Mark Lee -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'markleeisme';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://markleeis.me/blog/2013/04/02/nodejs-chat-server/';
+        var disqus_url = 'http://markleeis.me/blog/2013/04/02/nodejs-chat-server/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-40025559-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>
