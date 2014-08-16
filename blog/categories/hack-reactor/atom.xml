@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Hack Reactor | Mark's Blog]]></title>
-  <link href="http://markleeis.me/blog/categories/hack-reactor/atom.xml" rel="self"/>
-  <link href="http://markleeis.me/"/>
-  <updated>2014-08-16T13:53:51-07:00</updated>
-  <id>http://markleeis.me/</id>
+  <link href="http://marklee22.github.io/blog/categories/hack-reactor/atom.xml" rel="self"/>
+  <link href="http://marklee22.github.io/"/>
+  <updated>2014-08-16T13:59:34-07:00</updated>
+  <id>http://marklee22.github.io/</id>
   <author>
     <name><![CDATA[Mark Lee]]></name>
     <email><![CDATA[marklee22@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Job! - Slideshare]]></title>
-    <link href="http://markleeis.me/blog/2013/06/30/new-job/"/>
+    <link href="http://marklee22.github.io/blog/2013/06/30/new-job/"/>
     <updated>2013-06-30T23:29:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/06/30/new-job</id>
+    <id>http://marklee22.github.io/blog/2013/06/30/new-job</id>
     <content type="html"><![CDATA[<p>I&rsquo;m announcing here that I have signed my offer letter and have a new job! Starting July 15th, I will be a Software Engineer for Slideshare/LinkedIn. <a href="http://slideshare.net">Slideshare</a> is an entity within LinkedIn, but their offices are located in LinkedIn&rsquo;s sales office here in local SF. I&rsquo;m ecstatic and excited about the opportunity as I will be tackling becoming a full stack + DevOps engineer.</p>
 
 <div style="text-align: center;">
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Software Engineer Interview Process]]></title>
-    <link href="http://markleeis.me/blog/2013/06/24/the-interview-process/"/>
+    <link href="http://marklee22.github.io/blog/2013/06/24/the-interview-process/"/>
     <updated>2013-06-24T14:37:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/06/24/the-interview-process</id>
+    <id>http://marklee22.github.io/blog/2013/06/24/the-interview-process</id>
     <content type="html"><![CDATA[<p>After going through so many interviews, I decided to blog about what the interviewing process is like for becoming a developer in this day and age. If you refer to my last post, I gave you the percentages of all the stages of each interview. Overall, I went through 30+ applications, 20 recruiter calls, 15-20 phone screens, and 11 on-site interviews. Clearly I am not great at interviewing as I received four offers total, but I do feel like I now understand the dos and don'ts of the interview process as a whole.</p>
 
 <h3>Stage 1: The Resume</h3>
@@ -117,9 +117,9 @@
   
   <entry>
     <title type="html"><![CDATA[Meteor.js and Yelp OAuth Search]]></title>
-    <link href="http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/"/>
+    <link href="http://marklee22.github.io/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/"/>
     <updated>2013-05-22T18:07:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search</id>
+    <id>http://marklee22.github.io/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search</id>
     <content type="html"><![CDATA[<p>Revisiting my MeetMeet web app, I thought I&rsquo;d share the code snippet for configuring Meteor.js to work with Yelp&rsquo;s search API. Meteor is still new and the smart packages are still being churned out every day, but one does not exist for Yelp search.</p>
 
 <h4>The Pre-Reqs</h4>
@@ -235,9 +235,9 @@ tokenSecret: auth.accessTokenSecret
   
   <entry>
     <title type="html"><![CDATA[The Dreaded Job Search]]></title>
-    <link href="http://markleeis.me/blog/2013/05/20/the-dreaded-job-search/"/>
+    <link href="http://marklee22.github.io/blog/2013/05/20/the-dreaded-job-search/"/>
     <updated>2013-05-20T11:21:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/05/20/the-dreaded-job-search</id>
+    <id>http://marklee22.github.io/blog/2013/05/20/the-dreaded-job-search</id>
     <content type="html"><![CDATA[<h3>The Serious Side</h3>
 
 <p>Well, the day is finally upon us here at Hack Reactor. The dreaded job search! Dun dun dun dunnnnn.</p>
@@ -249,9 +249,9 @@ tokenSecret: auth.accessTokenSecret
 <p>For the 25% returning visitor traffic (according to Google Analytics), you may/may not notice there are three (YES! Three!) new links in the sidebar.</p>
 
 <ul>
-<li><a href="http://markleeis.me/resume">Resume</a></li>
-<li><a href="http://markleeis.me/projects">Projects</a></li>
-<li>And <a href="http://markleeis.me/about">About Me</a></li>
+<li><a href="http://marklee22.github.io/resume">Resume</a></li>
+<li><a href="http://marklee22.github.io/projects">Projects</a></li>
+<li>And <a href="http://marklee22.github.io/about">About Me</a></li>
 </ul>
 
 
@@ -273,9 +273,9 @@ tokenSecret: auth.accessTokenSecret
   
   <entry>
     <title type="html"><![CDATA[My First Hackathon]]></title>
-    <link href="http://markleeis.me/blog/2013/05/05/my-first-hackathon/"/>
+    <link href="http://marklee22.github.io/blog/2013/05/05/my-first-hackathon/"/>
     <updated>2013-05-05T14:43:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/05/05/my-first-hackathon</id>
+    <id>http://marklee22.github.io/blog/2013/05/05/my-first-hackathon</id>
     <content type="html"><![CDATA[<p>This weekend, we took some time off from the regular day-to-day and all went to a Hackathon called <a href="http://angelhack.com/">Angel Hack</a>. I went in as a team of two with my classmate Philip, and our idea was to create a random recipe generator that integrated with Instagram. We felt that our idea was simple enough to finish in 24 hours, as well as, creative enough to distinguish our product from the other apps generated in the past.</p>
 
 <p><img class="center" src="/images/posts/angelhack/RecipeGram-mock.png" width="300" height="150">

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Backbone.js | Mark's Blog]]></title>
-  <link href="http://markleeis.me/blog/categories/backbone-dot-js/atom.xml" rel="self"/>
-  <link href="http://markleeis.me/"/>
-  <updated>2014-08-16T13:53:51-07:00</updated>
-  <id>http://markleeis.me/</id>
+  <link href="http://marklee22.github.io/blog/categories/backbone-dot-js/atom.xml" rel="self"/>
+  <link href="http://marklee22.github.io/"/>
+  <updated>2014-08-16T13:59:34-07:00</updated>
+  <id>http://marklee22.github.io/</id>
   <author>
     <name><![CDATA[Mark Lee]]></name>
     <email><![CDATA[marklee22@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Backbone.js Tips]]></title>
-    <link href="http://markleeis.me/blog/2013/04/15/backbone-dot-js-tips/"/>
+    <link href="http://marklee22.github.io/blog/2013/04/15/backbone-dot-js-tips/"/>
     <updated>2013-04-15T16:45:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/04/15/backbone-dot-js-tips</id>
+    <id>http://marklee22.github.io/blog/2013/04/15/backbone-dot-js-tips</id>
     <content type="html"><![CDATA[<p>I&rsquo;ve spent a lot of time the past couple of weeks learning a lot of new languages, technologies, and concepts.  One that I have  particularly been focusing on is <a href="">Backbone.js</a>, which is a fairly complicated library for such a small amount of code.  I just want to make it clear that this is not a post about how Backbone works, but instead is meant more as tips or &ldquo;gotchas&rdquo; for what I found difficult learning Backbone from scratch.</p>
 
 <h3>Break out your code</h3>

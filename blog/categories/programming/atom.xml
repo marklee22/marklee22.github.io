@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Programming | Mark's Blog]]></title>
-  <link href="http://markleeis.me/blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://markleeis.me/"/>
-  <updated>2014-08-16T13:53:51-07:00</updated>
-  <id>http://markleeis.me/</id>
+  <link href="http://marklee22.github.io/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://marklee22.github.io/"/>
+  <updated>2014-08-16T13:59:34-07:00</updated>
+  <id>http://marklee22.github.io/</id>
   <author>
     <name><![CDATA[Mark Lee]]></name>
     <email><![CDATA[marklee22@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Year in Review]]></title>
-    <link href="http://markleeis.me/blog/2014/06/04/year-in-review/"/>
+    <link href="http://marklee22.github.io/blog/2014/06/04/year-in-review/"/>
     <updated>2014-06-04T20:46:51-07:00</updated>
-    <id>http://markleeis.me/blog/2014/06/04/year-in-review</id>
+    <id>http://marklee22.github.io/blog/2014/06/04/year-in-review</id>
     <content type="html"><![CDATA[<p>Wow! It&rsquo;s been a little less than a year since I began my new career as a Software Engineer here at Slideshare. I&rsquo;ve been meaning to get around to writing up a blog post about my life in the past few months, but just never got around to it. I spent a lot of time re-adjusting back to my life after graduating Hack Reactor in June last year, and then went 110% to make sure I did my best to not fuck up while I started my new career path into full-time development. <em>Spoiler alert:</em> It&rsquo;s been pretty fucking awesome!</p>
 
 <h3>Life Updates</h3>
@@ -76,9 +76,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Job! - Slideshare]]></title>
-    <link href="http://markleeis.me/blog/2013/06/30/new-job/"/>
+    <link href="http://marklee22.github.io/blog/2013/06/30/new-job/"/>
     <updated>2013-06-30T23:29:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/06/30/new-job</id>
+    <id>http://marklee22.github.io/blog/2013/06/30/new-job</id>
     <content type="html"><![CDATA[<p>I&rsquo;m announcing here that I have signed my offer letter and have a new job! Starting July 15th, I will be a Software Engineer for Slideshare/LinkedIn. <a href="http://slideshare.net">Slideshare</a> is an entity within LinkedIn, but their offices are located in LinkedIn&rsquo;s sales office here in local SF. I&rsquo;m ecstatic and excited about the opportunity as I will be tackling becoming a full stack + DevOps engineer.</p>
 
 <div style="text-align: center;">
@@ -93,9 +93,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Software Engineer Interview Process]]></title>
-    <link href="http://markleeis.me/blog/2013/06/24/the-interview-process/"/>
+    <link href="http://marklee22.github.io/blog/2013/06/24/the-interview-process/"/>
     <updated>2013-06-24T14:37:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/06/24/the-interview-process</id>
+    <id>http://marklee22.github.io/blog/2013/06/24/the-interview-process</id>
     <content type="html"><![CDATA[<p>After going through so many interviews, I decided to blog about what the interviewing process is like for becoming a developer in this day and age. If you refer to my last post, I gave you the percentages of all the stages of each interview. Overall, I went through 30+ applications, 20 recruiter calls, 15-20 phone screens, and 11 on-site interviews. Clearly I am not great at interviewing as I received four offers total, but I do feel like I now understand the dos and don'ts of the interview process as a whole.</p>
 
 <h3>Stage 1: The Resume</h3>
@@ -178,9 +178,9 @@
   
   <entry>
     <title type="html"><![CDATA[Meteor.js and Yelp OAuth Search]]></title>
-    <link href="http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/"/>
+    <link href="http://marklee22.github.io/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/"/>
     <updated>2013-05-22T18:07:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search</id>
+    <id>http://marklee22.github.io/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search</id>
     <content type="html"><![CDATA[<p>Revisiting my MeetMeet web app, I thought I&rsquo;d share the code snippet for configuring Meteor.js to work with Yelp&rsquo;s search API. Meteor is still new and the smart packages are still being churned out every day, but one does not exist for Yelp search.</p>
 
 <h4>The Pre-Reqs</h4>
@@ -296,9 +296,9 @@ tokenSecret: auth.accessTokenSecret
   
   <entry>
     <title type="html"><![CDATA[The Dreaded Job Search]]></title>
-    <link href="http://markleeis.me/blog/2013/05/20/the-dreaded-job-search/"/>
+    <link href="http://marklee22.github.io/blog/2013/05/20/the-dreaded-job-search/"/>
     <updated>2013-05-20T11:21:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/05/20/the-dreaded-job-search</id>
+    <id>http://marklee22.github.io/blog/2013/05/20/the-dreaded-job-search</id>
     <content type="html"><![CDATA[<h3>The Serious Side</h3>
 
 <p>Well, the day is finally upon us here at Hack Reactor. The dreaded job search! Dun dun dun dunnnnn.</p>
@@ -310,9 +310,9 @@ tokenSecret: auth.accessTokenSecret
 <p>For the 25% returning visitor traffic (according to Google Analytics), you may/may not notice there are three (YES! Three!) new links in the sidebar.</p>
 
 <ul>
-<li><a href="http://markleeis.me/resume">Resume</a></li>
-<li><a href="http://markleeis.me/projects">Projects</a></li>
-<li>And <a href="http://markleeis.me/about">About Me</a></li>
+<li><a href="http://marklee22.github.io/resume">Resume</a></li>
+<li><a href="http://marklee22.github.io/projects">Projects</a></li>
+<li>And <a href="http://marklee22.github.io/about">About Me</a></li>
 </ul>
 
 
