@@ -4,6 +4,8 @@ title: "The Marathon Experience"
 date: 2014-08-03 12:40:48 -0700
 comments: true
 categories: [Personal]
+facebook:
+  image: http://markleeis.me/images/posts/2014-08-03/marathon_course.png
 ---
 
 A week ago, I finished my first ever marathon with a painful time of 3:30:42. I'm ecstatic. It's about 15 minutes faster than I hoped for, or a little more than ~30 seconds faster per mile than what I trained for. Despite that, 42 seconds is going to haunt me for quite some time. A lot of people have asked me what it was like, so I decided I'd write a recount of events of the whole thing from start to finish.
