@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Slideshare | Mark's Blog]]></title>
-  <link href="http://markleeis.me/blog/categories/slideshare/atom.xml" rel="self"/>
-  <link href="http://markleeis.me/"/>
-  <updated>2014-08-16T13:53:51-07:00</updated>
-  <id>http://markleeis.me/</id>
+  <link href="http://marklee22.github.io/blog/categories/slideshare/atom.xml" rel="self"/>
+  <link href="http://marklee22.github.io/"/>
+  <updated>2014-08-16T13:59:34-07:00</updated>
+  <id>http://marklee22.github.io/</id>
   <author>
     <name><![CDATA[Mark Lee]]></name>
     <email><![CDATA[marklee22@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Year in Review]]></title>
-    <link href="http://markleeis.me/blog/2014/06/04/year-in-review/"/>
+    <link href="http://marklee22.github.io/blog/2014/06/04/year-in-review/"/>
     <updated>2014-06-04T20:46:51-07:00</updated>
-    <id>http://markleeis.me/blog/2014/06/04/year-in-review</id>
+    <id>http://marklee22.github.io/blog/2014/06/04/year-in-review</id>
     <content type="html"><![CDATA[<p>Wow! It&rsquo;s been a little less than a year since I began my new career as a Software Engineer here at Slideshare. I&rsquo;ve been meaning to get around to writing up a blog post about my life in the past few months, but just never got around to it. I spent a lot of time re-adjusting back to my life after graduating Hack Reactor in June last year, and then went 110% to make sure I did my best to not fuck up while I started my new career path into full-time development. <em>Spoiler alert:</em> It&rsquo;s been pretty fucking awesome!</p>
 
 <h3>Life Updates</h3>
@@ -76,9 +76,9 @@
   
   <entry>
     <title type="html"><![CDATA[1 month update]]></title>
-    <link href="http://markleeis.me/blog/2013/08/21/1-month-update/"/>
+    <link href="http://marklee22.github.io/blog/2013/08/21/1-month-update/"/>
     <updated>2013-08-21T23:00:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/08/21/1-month-update</id>
+    <id>http://marklee22.github.io/blog/2013/08/21/1-month-update</id>
     <content type="html"><![CDATA[<p>I bet you thought I was going to stop updating this once I got a job! You were * <strong>almost</strong> * right&hellip;</p>
 
 <p>No, but seriously, I&rsquo;ve been really busy since starting my new job and regaining a social life. It just feels like my life is balanced again.</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Projects | Mark's Blog]]></title>
-  <link href="http://markleeis.me/blog/categories/projects/atom.xml" rel="self"/>
-  <link href="http://markleeis.me/"/>
-  <updated>2014-08-16T13:53:51-07:00</updated>
-  <id>http://markleeis.me/</id>
+  <link href="http://marklee22.github.io/blog/categories/projects/atom.xml" rel="self"/>
+  <link href="http://marklee22.github.io/"/>
+  <updated>2014-08-16T13:59:34-07:00</updated>
+  <id>http://marklee22.github.io/</id>
   <author>
     <name><![CDATA[Mark Lee]]></name>
     <email><![CDATA[marklee22@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Blackjack: Backbone + CoffeeScript]]></title>
-    <link href="http://markleeis.me/blog/2013/04/08/blackjack-backbone-plus-coffeescript/"/>
+    <link href="http://marklee22.github.io/blog/2013/04/08/blackjack-backbone-plus-coffeescript/"/>
     <updated>2013-04-08T16:09:00-07:00</updated>
-    <id>http://markleeis.me/blog/2013/04/08/blackjack-backbone-plus-coffeescript</id>
+    <id>http://marklee22.github.io/blog/2013/04/08/blackjack-backbone-plus-coffeescript</id>
     <content type="html"><![CDATA[<p><img class="float-right" src="/images/posts/blackjack/specs.png" width="400" height="360">
 With today&rsquo;s post, I bring to you my first interactive game written entirely in javascript.  As always if you&rsquo;re non-technical, feel free to jump straight to the bottom of this post to see the app.  I really enjoyed this project because I was able to accomplish three things I&rsquo;ve been meaning to spend more time on:</p>
 
