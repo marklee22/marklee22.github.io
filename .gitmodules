@@ -1,0 +1,3 @@
+[submodule ".themes/grayshade"]
+	path = .themes/grayshade
+	url = https://github.com/shashankmehta/greyshade.git
