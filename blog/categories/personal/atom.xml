@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Personal | Mark's Blog]]></title>
   <link href="http://marklee22.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://marklee22.github.io/"/>
-  <updated>2014-08-16T14:33:44-07:00</updated>
+  <updated>2014-12-15T23:44:20-08:00</updated>
   <id>http://marklee22.github.io/</id>
   <author>
     <name><![CDATA[Mark Lee]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ups and Downs and New Ventures]]></title>
+    <link href="http://marklee22.github.io/blog/2014/12/15/growing-pains/"/>
+    <updated>2014-12-15T21:39:12-08:00</updated>
+    <id>http://marklee22.github.io/blog/2014/12/15/growing-pains</id>
+    <content type="html"><![CDATA[<h1>What I&rsquo;ve been up to</h1>
+
+<p>There&rsquo;s a reason why everyone writes a blog. Why do I write mine? Well, I&rsquo;m not quite sure anymore. Clearly my posts are few and far between. Writer&rsquo;s block is something I experience often whenever I start a new post. It&rsquo;s the same unexplainable mental blank I feel when I fill out online dating profiles. Luckily for everyone, someone created Tinder and took the whole mental piece out of the picture. Unfortunately for me, Twitter is not the right medium for blogging.</p>
+
+<p>Recently we just launched a new and improved &ldquo;Slideview&rdquo;, which is our main page for consuming content here at Slideshare. It gets the majority of page views (~4 million/day), which I helped rewrite most of the code. Normally, I&rsquo;d be writing a blog post about how awesome it feels to implement two redesigns for both mobile and desktop for a major website, but for some reason it doesn&rsquo;t feel the same this time around.</p>
+
+<h1>Reflections</h1>
+
+<p>It&rsquo;s been almost a year and half since I started working here at Slideshare. When I first started I was basically one of two frontend devs in SF in a broader team of 10-15. Now our team is 8-10 and our office has 35-40 people. I&rsquo;ve gone from first job noob to team lead in 17 months. The negative side of me thinks this is crazy; I shouldn&rsquo;t be leading any team based on my experience. While the other side of me is happy and proud that no matter where I go, success is something that soon follows.&mdash;I know, I know. I&rsquo;m super humble&hellip;</p>
+
+<p>With that success though comes more responsiblity. What I worked so hard for turned into the thing I currently dislike most about my job: being &ldquo;the guy&rdquo;. The mission from day one has always been to become a better engineer. In order to become a better engineer, you work with people who are better than you. I can definitely say there has always been one co-worker who is better than me, but up until a month ago, every single new hire on my team  since I&rsquo;ve been here has been less experienced than me. Slowly over time as my team expanded, my role has transitioned from being a productive engineer with tons of uninterrupted time, to more of a mentoring and review role.</p>
+
+<p>Who knew working hard to learn as much as possible about a company&rsquo;s stack could be a bad thing? I felt like I dug myself into a hole I couldn&rsquo;t ever get out of. I became the &ldquo;google search engine&rdquo; of Slideshare frontend simply because I took a vested interest in figuring out as much as possible. After we doubled in size, I quickly became exhausted, irritated, and annoyed that no one understood what I was feeling because for the most part, I kept it to myself.</p>
+
+<p>Taking the grass is always greener approach, I looked at other opportunities a few weeks back. There are simply more engineering jobs than there are engineers. It&rsquo;s overwhelming and stressful since it&rsquo;s impossible to evaluate engineering talent without working with them for weeks. However, the logical thing to do was to start over and find a team that better fits. I went from thinking about switching Slideshare teams, to joining a startup, to staying and trying to fix the issues that I didn&rsquo;t like. What I never thought about though was transferring to somewhere internally in LinkedIn. After failing a phone screen and an on-site, I realized two things this time around:</p>
+
+<ol>
+<li><p> I&rsquo;m much worse at interviewing now than when I was looking for a job two years ago.</p></li>
+<li><p> Having a job and interviewing is not an efficient way to find the perfect fit for your next career move.</p></li>
+</ol>
+
+
+<h1>Next Steps</h1>
+
+<p>What I&rsquo;ve decided to do instead is switch inside LinkedIn. Learn something new with people I&rsquo;ve worked with before under the guidance of upper management that&rsquo;s (hopefully) looking out for my best interests. It definitely sucks leaving a product that you&rsquo;ve spent so much time and effort investing in to make it better, but comfort is a feeling I dislike. I can&rsquo;t help but feel like I&rsquo;m settling when I&rsquo;m comfortable. I&rsquo;m too young and too type-A for that. No matter what the next venture is, one thing is certain. I&rsquo;ll work my ass off to make sure it doesn&rsquo;t fail and that&rsquo;s what&rsquo;s most important about making something successful in the future.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Marathon Experience]]></title>
@@ -249,91 +282,6 @@
 
 
 <p>Special thanks to everyone, especially <a href="http://hackreactor.com">Hack Reactor</a> for helping me achieve my goal. It&rsquo;s crazy to think 4 months ago when I started this blog that I achieved what I originally set out to do! Now that I have a job, I&rsquo;ll be focusing on programming again and hopefully never have to apply for jobs again in the near future. My duties will include heavy Javascript and Ruby/Rails, with a strong emphasis on testing. So expect a lot of Rails posts in the future!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Software Engineer Interview Process]]></title>
-    <link href="http://marklee22.github.io/blog/2013/06/24/the-interview-process/"/>
-    <updated>2013-06-24T14:37:00-07:00</updated>
-    <id>http://marklee22.github.io/blog/2013/06/24/the-interview-process</id>
-    <content type="html"><![CDATA[<p>After going through so many interviews, I decided to blog about what the interviewing process is like for becoming a developer in this day and age. If you refer to my last post, I gave you the percentages of all the stages of each interview. Overall, I went through 30+ applications, 20 recruiter calls, 15-20 phone screens, and 11 on-site interviews. Clearly I am not great at interviewing as I received four offers total, but I do feel like I now understand the dos and don'ts of the interview process as a whole.</p>
-
-<h3>Stage 1: The Resume</h3>
-
-<p>The first step is to take your resume. Burn it. Then build it from the ashes. I&rsquo;m joking, but old Word Doc resumes are out. &ldquo;Adobe In-design&rdquo; templates are in. If you&rsquo;re not ready to pay for In-Design, there is an open-source alternative called <a href="http://scribus.net">scribus</a>, which I used to make my resume <a href="/resume">here</a>. I took two things into account when designing my resume:</p>
-
-<ol>
-<li>Attention spans are short. Less is more.</li>
-<li>Seeing something different will probably stand out.</li>
-</ol>
-
-
-<p>Hack Reactor provides a lot of advice when creating resumes given the fact a lot of people don&rsquo;t have a technical work background related to programming. Luckily, I had a formal education and a job that performed technical duties, but readability was my main focus. Using my resume as an example, it was structured to have the stronger sections at the beginning and end (skills &amp; education), and then the weaker sections (work experience) in between. Some may argue my job is more important, but given the fact I did not do much programming on the job, I felt it less applicable, so YMMV.</p>
-
-<h3>Stage 2: The Application</h3>
-
-<p>This is straight forward. You want to send out as many applications as possible. At first I regretted doing this, but as most things go, things don&rsquo;t always pan out for your first or second choice and having a backup is a good idea. I noticed cover letters were optional most of the time, but if there&rsquo;s a box for it, <strong>always put a cover letter</strong>. I used a generic cover letter template that included the following:</p>
-
-<ol>
-<li>A brief intro of why I was interested in the position (1-2 sentences)</li>
-<li>A brief description of my skills and previous work experience/school (3-4 sentences)</li>
-<li>Links to my current projects I&rsquo;ve been working on</li>
-<li>A note for them to refer to my resume for a list of my skills</li>
-</ol>
-
-
-<p>What you have to realize here is that engineers (unless you&rsquo;re applying to startups) are not the first person to read your resume. It&rsquo;s a non-technical resource, so they are looking for reasons to filter you out, so don&rsquo;t give them any.</p>
-
-<h3>Stage 3: The Recruiter Call</h3>
-
-<p>Depending on the size of the company, they may not have recruiters fielding this call, or may skip this call entirely. It&rsquo;s sole purpose is for them to weed you out. Now, what I&rsquo;m about to say is not indicative of what I did, but you could literally lie about or inflate your background/skills here. What I mean by this is the sole point here is to <strong>sell yourself to someone non-technical</strong>. They are gauging your background by looking for keywords and seeing whether or not you&rsquo;d be a good culture fit. Luckily for me, I&rsquo;ve had 5 years of consulting background where I was on the phone constantly, so I&rsquo;ve had some practice.</p>
-
-<p>Overall, sell yourself, but still keep it honest. Just don&rsquo;t sell yourself short or speak negatively about yourself!</p>
-
-<h3>Stage 4: The Phone Screen</h3>
-
-<p>The purpose of the phone screen is to arrange a conversation between yourself and an engineer. The main purpose of this call is to gauge a candidate&rsquo;s technical knowledge by having an engineer ask basic questions that every ____ engineer should know. The format is pretty straightforward. You can expect a 45-60 minute phone call, and possibly a second one given the size of the company.</p>
-
-<p>The format is:</p>
-
-<ol>
-<li>Introductions for both parties</li>
-<li>Verbal questions from the engineer asking to describe simple web things that EVERY web developer should know</li>
-<li>1-4 coding problems that are domain specific (algorithms, data structures, CSS, javascript, etc.)</li>
-<li>A period to ask questions about the job/company</li>
-</ol>
-
-
-<p>This stage is heavy technically and less about selling yourself. Obviously, you&rsquo;ll want to ask some interesting questions at the end to show you&rsquo;re interested, but I&rsquo;m assuming that is obvious.</p>
-
-<h3>Stage 5: The Take Home Problem</h3>
-
-<p>This stage could be substituted for stage 4 or given in addition. It&rsquo;s what it sounds like though. An employer gives you a problem to code up in the language of your choice and submit it upon completion. These are usually projects ranging from 3-8 hours of work, and is pretty straight forward. A lot of times, the solutions can be found somewhere on the web, but it&rsquo;s still best to do it from scratch.</p>
-
-<h3>Stage 6: The On-Site Interview</h3>
-
-<p>Congratulations! You&rsquo;ve made it to the illustrious on-site interview. I could write an entire separate blog post about the on-site interview and how I don&rsquo;t agree with it&rsquo;s structure. However, there&rsquo;s a good chance, most of my biased opinion is based on the bitterness that I was not very good at these. Here&rsquo;s what I think will help calm your nerves about on-site interviews. They are simply evaluating two things: <strong>1) How you think 2) Are you a good culture fit.</strong></p>
-
-<p>The format is pretty straight forward. It&rsquo;s anywhere from 3-6 hours. You meet the team and have several 45-60 minute sessions with 1-3 people (usually just 1) where you chat, whiteboard, and/or pair program problems together. Some interviewers are really good and some are really bad. What you need to focus on is your plan of attack and that&rsquo;s what I&rsquo;m going to write about.</p>
-
-<p>What you should do when you whiteboard:</p>
-
-<ol>
-<li>Take your time and think about it before you write anything on the board</li>
-<li>Draw a diagram of how your solution should work</li>
-<li>Figure out the edge cases first so you can plan accordingly</li>
-<li>Write out pseudocode so your interviewer knows what you&rsquo;re thinking</li>
-<li>Write the actual code carefully</li>
-<li>Refactor your code, if possible</li>
-</ol>
-
-
-<p>If your interviewer is good, he/she will help you along the way. If they don&rsquo;t and you don&rsquo;t know the answer, don&rsquo;t say &ldquo;I don&rsquo;t know&rdquo;. Literally, just sit there in silence and think or say you would normally use google.</p>
-
-<p>Overall, it&rsquo;s not about whether you get the right answer or not. It&rsquo;s all about the process you use to get your solution and whether you have a structured approach. Programming is very structured profession with a lot of semantics that need to be followed, so just throwing shit at the board and hoping it will stick is probably the worst thing you could do. And I definitely did that a few times just to say something to break the silence. Basically&hellip;don&rsquo;t do that and instead try to follow the steps I outlined above.</p>
-
-<p>Best of luck, and feel free to email me if you have any other questions.</p>
 ]]></content>
   </entry>
   
