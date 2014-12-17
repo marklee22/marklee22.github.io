@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Backbone.js | Mark's Blog]]></title>
+  <link href="http://markleeis.me/blog/categories/backbone-dot-js/atom.xml" rel="self"/>
+  <link href="http://markleeis.me/"/>
+  <updated>2014-12-17T11:11:46-08:00</updated>
+  <id>http://markleeis.me/</id>
+  <author>
+    <name><![CDATA[Mark Lee]]></name>
+    <email><![CDATA[marklee22@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Backbone.js Tips]]></title>
+    <link href="http://markleeis.me/blog/2013/04/15/backbone-dot-js-tips/"/>
+    <updated>2013-04-15T16:45:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/04/15/backbone-dot-js-tips</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve spent a lot of time the past couple of weeks learning a lot of new languages, technologies, and concepts.  One that I have  particularly been focusing on is <a href="">Backbone.js</a>, which is a fairly complicated library for such a small amount of code.  I just want to make it clear that this is not a post about how Backbone works, but instead is meant more as tips or &ldquo;gotchas&rdquo; for what I found difficult learning Backbone from scratch.</p>
+
+<h3>Break out your code</h3>
+
+<p>Backbone forces you to provide structure around your javascript code.  You might as well go the extra step and create a standard folder structure to separate each Class because it&rsquo;s a good habit to have.  I set up a simple folder structure before I start every project for models, collections, and views to make includes easier.</p>
+
+<div class="aligncenter">
+  <img src="/images/posts/backbone-tips/backbone-files.png">
+  <img src="/images/posts/backbone-tips/backbone-files2.png">
+</div>
+
+
+<h3>You should know Underscore.js</h3>
+
+<p>Backbone is written by the same developer who wrote <a href="">Underscore.js</a> and the majority of the Underscore functionality has been rolled into Backbone for models and collections.  It&rsquo;s worth the hour or so to study Underscore to help utilize these helpers instead of writing your own for loops and callbacks.</p>
+
+<h3>Collections cannot hold attributes/properties</h3>
+
+<p>I learned this the hard way, but you cannot call <code>this.set('attribute') = 'blah'</code> on a collection.  Collections are meant only to hold models and you&rsquo;ll get various errors if you try and call set/get methods on collections.</p>
+
+<h3>Use triggers when children models need to communicate with the parent/grandparent</h3>
+
+<p>I spent the good first few hours asking myself &ldquo;how can I get that model to do something based on another model?&rdquo;.  With several layers of models and collections, it&rsquo;s hard to picture how a lower tiered model communicates up the event chain.  Well, Backbone uses events and triggers to accomplish this.</p>
+
+<p>Say I have an app model that holds a collection of card models.  In order for card to communicate with app, my collection would have a function that evaluates the state of a card or cards, and trigger an event if that condition is met.  Then in the app model, I would listen for that specific event to fire, and specify a callback to perform some action on my app.</p>
+
+<p>Using my Blackjack App as an example, the app (model) listens for a player hand (collection), which checks each card (model) to determine if a player has blackjack or loses.  See the example below:</p>
+
+<p>Hand Collection function to evaluate a player&rsquo;s total score
+``` javascript
+check: &ndash;>
+  if @length is 2 and @scores()[1] is 21</p>
+
+<pre><code>@trigger('blackjack', @)
+</code></pre>
+
+<p>  else if(@scores().every (score) &ndash;> score > 21)</p>
+
+<pre><code>@trigger('lose', @)
+</code></pre>
+
+<p>```</p>
+
+<p>The App Model that listens for the &lsquo;lose&rsquo; and &lsquo;blackjack&rsquo; events with associated callbacks
+<code>javascript
+  @get('playerHand').on 'lose', @gameOver, this
+  @get('playerHand').on 'blackjack', @blackJack, this
+</code></p>
+
+<h3>jQuery event handlers are only initiated once</h3>
+
+<p>When your view is initialized, any event handlers declared in your events hash or initialize function will only be initialized once and inserted into the DOM.  If you end up deleting or replacing your html in your render function (For example: calling <code>this.$el.html([some rendered html]))</code>), your jQuery event handlers will be blown away.  In order to preserve these handlers, you would have to re-create them when you re-render your page.  A simple alternative to solve this however is to call <code>this.$el.children().detach()</code> to safely detach and reattach your jQuery children event handlers.</p>
+
+<h3>Collection.fetch() resets your collection</h3>
+
+<p>Backbone has implemented code that uses jQuery.ajax.  If you&rsquo;re switching over to Backbone models and have previous ajax calls defined, you&rsquo;ll have to utilize the url property on your Collection/Models and call fetch() to pull the data down from the server.  The one thing I discovered is everytime you fetch your data from the server, the default action is to reset the collection.  I believe you can get around this by setting some flags in your options hash and/or defining your own Collection.parse function.  In general though, it&rsquo;s best to fetch once and sync data thereafter rather than fetching multiple times from your server.</p>
+
+<h3>Conclusion</h3>
+
+<p>That&rsquo;s all from me (for now).  Hopefully someone will find this useful because Backbone is a tough concept to learn.  By no means am I an expert with Backbone, but I&rsquo;m going to continue to practice more with it.</p>
+]]></content>
+  </entry>
+  
+</feed>

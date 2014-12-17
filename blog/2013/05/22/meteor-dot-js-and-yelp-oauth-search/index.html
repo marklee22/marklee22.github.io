@@ -1,0 +1,326 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Meteor.js and Yelp OAuth Search - Mark's Blog</title>
+	<meta name="author" content="Mark Lee">
+
+	
+	<meta name="description" content="Meteor.js and Yelp OAuth Search Revisiting my MeetMeet web app, I thought I&rsquo;d share the code snippet for configuring Meteor.js to work with &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="" rel="alternate" title="Mark's Blog" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/blackjack/app.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="/stylesheets/animate.css" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="/javascripts/libs/underscore.js"></script>
+  <script src="/javascripts/libs/backbone.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Meteor.js and Yelp OAuth Search" />
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("marklee22@gmail.com") + "?s=160&r=pg' alt='Profile Picture' style='width: 160px;'");
+	</script>
+</div>
+<h1><span class="sidebar-title"><a href="/">markLee === me</a></span></h1>
+<p class="subtitle">My Journey from IT consultant to Full Stack Developer</p>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/resume">Resume</a></li>
+  <li><a href="/projects">Projects</a></li>
+  <li><a href="/about">About Me</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		<a class="facebook" href="http://www.facebook.com/marklee22" title="Facebook">Facebook</a>
+		
+		
+		<a class="google" href="https://plus.google.com/101058688226425085711" rel="author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/Makaleee" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/marklee22" title="GitHub">GitHub</a>
+		
+		
+		<a class="linkedin" href="http://www.linkedin.com/in/marklee22">LinkedIn</a>
+		
+		
+		
+		
+		
+	</div>
+</nav>
+<hgroup>
+</hgroup>
+
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Meteor.js and Yelp OAuth Search</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Revisiting my MeetMeet web app, I thought I&rsquo;d share the code snippet for configuring Meteor.js to work with Yelp&rsquo;s search API. Meteor is still new and the smart packages are still being churned out every day, but one does not exist for Yelp search.</p>
+
+<h4>The Pre-Reqs</h4>
+
+<p>First things first, you&rsquo;ll need a Yelp developer account first, which can be found <a href="http://www.yelp.com/developers/documentation">here</a>. Once you sign up and get API keys, make sure you take down the following:</p>
+
+<ul>
+<li>Consumer Key</li>
+<li>Consumer Secret</li>
+<li>Token</li>
+<li>Token Secret</li>
+</ul>
+
+
+<p>Then login to your mongo database with <code>meteor mongo</code> and run the following statement:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Accounts.loginServiceConfiguration.remove({service: "yelp"});
+</span><span class='line'>Accounts.loginServiceConfiguration.insert({
+</span><span class='line'>  service: "yelp",
+</span><span class='line'>  consumerKey: "YOUR_KEY_HERE",
+</span><span class='line'>  consumerSecret: "YOUR_SECRET_HERE",
+</span><span class='line'>  accessToken: "YOUR_TOKEN_HERE",
+</span><span class='line'>  accessTokenSecret: "YOUR_TOKEN_SECRET"
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This inserts the yelp service into the same collection as the other Meteor OAuth helpers.  Nothing gets stored on the user account for Yelp, but it&rsquo;s not good practice to have your credentials in source code.</p>
+
+<h4>The Code</h4>
+
+<p>I had to utilize Meteor&rsquo;s built in OAuth1 helpers and a little trial and error, but the finished code is below:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">yelpQuery</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">search</span><span class="p">,</span> <span class="nx">isCategory</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">,</span> <span class="nx">latitude</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Yelp search for userId: &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">userId</span> <span class="o">+</span> <span class="s1">&#39;(search, isCategory, lng, lat) with vals (&#39;</span><span class="p">,</span> <span class="nx">search</span><span class="p">,</span> <span class="nx">isCategory</span><span class="p">,</span> <span class="nx">longitude</span><span class="p">,</span> <span class="nx">latitude</span><span class="p">,</span> <span class="s1">&#39;)&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Query OAUTH credentials (these are set manually)</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">auth</span> <span class="o">=</span> <span class="nx">Accounts</span><span class="p">.</span><span class="nx">loginServiceConfiguration</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="nx">service</span><span class="o">:</span> <span class="s1">&#39;yelp&#39;</span><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Add auth signature manually</span>
+</span><span class='line'>  <span class="nx">auth</span><span class="p">[</span><span class="s1">&#39;serviceProvider&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">signatureMethod</span><span class="o">:</span> <span class="s2">&quot;HMAC-SHA1&quot;</span> <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">accessor</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">consumerSecret</span><span class="o">:</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">consumerSecret</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">tokenSecret</span><span class="o">:</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">accessTokenSecret</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">parameters</span> <span class="o">=</span> <span class="p">{};</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Search term or categories query</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="nx">isCategory</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">parameters</span><span class="p">.</span><span class="nx">category_filter</span> <span class="o">=</span> <span class="nx">search</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="nx">parameters</span><span class="p">.</span><span class="nx">term</span> <span class="o">=</span> <span class="nx">search</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Set lat, lon location, if available (SF is default location)</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="nx">longitude</span> <span class="o">&amp;&amp;</span> <span class="nx">latitude</span><span class="p">)</span>
+</span><span class='line'>    <span class="nx">parameters</span><span class="p">.</span><span class="nx">ll</span> <span class="o">=</span> <span class="nx">latitude</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="nx">longitude</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="nx">parameters</span><span class="p">.</span><span class="nx">location</span> <span class="o">=</span> <span class="s1">&#39;San+Francisco&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Results limited to 5</span>
+</span><span class='line'>  <span class="nx">parameters</span><span class="p">.</span><span class="nx">limit</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Configure OAUTH parameters for REST call</span>
+</span><span class='line'>  <span class="nx">parameters</span><span class="p">.</span><span class="nx">oauth_consumer_key</span> <span class="o">=</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">consumerKey</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">parameters</span><span class="p">.</span><span class="nx">oauth_consumer_secret</span> <span class="o">=</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">consumerSecret</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">parameters</span><span class="p">.</span><span class="nx">oauth_token</span> <span class="o">=</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">parameters</span><span class="p">.</span><span class="nx">oauth_signature_method</span> <span class="o">=</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">serviceProvider</span><span class="p">.</span><span class="nx">signatureMethod</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Create OAUTH1 headers to make request to Yelp API</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">oauthBinding</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">OAuth1Binding</span><span class="p">(</span><span class="nx">auth</span><span class="p">.</span><span class="nx">consumerKey</span><span class="p">,</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">consumerSecret</span><span class="p">,</span> <span class="s1">&#39;http://api.yelp.com/v2/search&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">oauthBinding</span><span class="p">.</span><span class="nx">accessTokenSecret</span> <span class="o">=</span> <span class="nx">auth</span><span class="p">.</span><span class="nx">accessTokenSecret</span><span class="p">;</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">headers</span> <span class="o">=</span> <span class="nx">oauthBinding</span><span class="p">.</span><span class="nx">_buildHeader</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Return data results only</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">oauthBinding</span><span class="p">.</span><span class="nx">_call</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;http://api.yelp.com/v2/search&#39;</span><span class="p">,</span> <span class="nx">headers</span><span class="p">,</span> <span class="nx">parameters</span><span class="p">).</span><span class="nx">data</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Input Parameters</h4>
+
+<ul>
+<li>search: Search term or category names</li>
+<li>isCategory: Boolean stating whether &lsquo;search&rsquo; parameter is a category</li>
+<li>longitude and latitude: Latitude and Longitude of user&rsquo;s location (optional)
+
+<ul>
+<li>Default location is statically set to San Francisco</li>
+</ul>
+</li>
+</ul>
+
+
+<p>You can use Yelp&rsquo;s provided sample program to test your API credentials work, but if everything works, you&rsquo;ll get back 5 yelp businesses as a javascript object.</p>
+
+<p><em>SOON TO COME</em>: An mrt package!</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Mark Lee -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'markleeisme';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/';
+        var disqus_url = 'http://markleeis.me/blog/2013/05/22/meteor-dot-js-and-yelp-oauth-search/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-40025559-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>

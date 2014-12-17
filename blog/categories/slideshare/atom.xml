@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Slideshare | Mark's Blog]]></title>
+  <link href="http://markleeis.me/blog/categories/slideshare/atom.xml" rel="self"/>
+  <link href="http://markleeis.me/"/>
+  <updated>2014-12-17T11:11:46-08:00</updated>
+  <id>http://markleeis.me/</id>
+  <author>
+    <name><![CDATA[Mark Lee]]></name>
+    <email><![CDATA[marklee22@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Year in Review]]></title>
+    <link href="http://markleeis.me/blog/2014/06/04/year-in-review/"/>
+    <updated>2014-06-04T20:46:51-07:00</updated>
+    <id>http://markleeis.me/blog/2014/06/04/year-in-review</id>
+    <content type="html"><![CDATA[<p>Wow! It&rsquo;s been a little less than a year since I began my new career as a Software Engineer here at Slideshare. I&rsquo;ve been meaning to get around to writing up a blog post about my life in the past few months, but just never got around to it. I spent a lot of time re-adjusting back to my life after graduating Hack Reactor in June last year, and then went 110% to make sure I did my best to not fuck up while I started my new career path into full-time development. <em>Spoiler alert:</em> It&rsquo;s been pretty fucking awesome!</p>
+
+<h3>Life Updates</h3>
+
+<p>I&rsquo;d say for a good 6 months, my work/life balance was a little out of whack, but I still managed to do some awesome things! Rather than go into the details, here&rsquo;s a short summary:</p>
+
+<ul>
+<li><a href="https://www.facebook.com/sbones">Scott Bonebrake</a>, moved in with me here in North Beach.</li>
+<li>My 7v7 Men&rsquo;s soccer team (Unathletic Madrid) and 11v11 coed soccer team (Ajax) won our league.</li>
+<li>Some dude headbutted me while playing soccer in December and broke my nose.</li>
+<li>Started training for the SF marathon this July.</li>
+<li>Traveled to Boston, Vegas, LA, and Austin to visit friends and family.</li>
+<li>Had an awesome three week vacation in South Korea and Malaysia with my #travelbros (FYI, we aren&rsquo;t bros. We use the term &lsquo;bro&rsquo; in a satirical way).</li>
+</ul>
+
+
+<h3>Work Updates</h3>
+
+<p>Okay, time to get into the section where I brag about my technical and work achievments this coming year. I think the majority of the people who read this blog are either my good friends or someone who has stumbled upon it searching for information regarding the success of graduating from Hack Reactor or bootcamps. I want to just confirm to all the people on the ropes that it was hands down <strong>the best</strong> investment I&rsquo;ve made in my life, and I would make the same decision twice in a heartbeat.</p>
+
+<p>I remember around this time last year, we were wrapping up HR and got a sense of everyone else&rsquo;s coding abilities. I never felt like I was the strongest programmer out of that class despite the fact I came in with the most experience and background. However, I knew I was one of the hardest working, and looking back at my life, that&rsquo;s something I&rsquo;ve always been good at. I can hypothesize all I want of where this trait originated from, but my best guess is my father worked his ass off and my older sister was/is way smarter than me. In metaphorical sports terms, my sister is like Lebron James while I am more like Tony Parker. She is just naturally gifted, while I had to put in the time and effort to become the <em>somewhat</em> intelligent man I am today.</p>
+
+<p>Over my time here at Slideshare, I&rsquo;ve grown from a guy who was scared of stepping on people&rsquo;s toes&hellip;to being one of the leaders on my team. We&rsquo;ve grown a lot this year. Our office in SF has almost doubled in size and as shocking as it sounds, I&rsquo;ve become one of the &ldquo;old guys&rdquo;. Figuratively and literally. I analyze every codereview, interview candidates, mentor new college grads, and even get my own intern this month (yay?). All while deploying (and fixing) features that get viewed by millions every day.</p>
+
+<p>It&rsquo;s quite exciting still and it&rsquo;s a lot easier when your team is a great group of people to work with on a daily basis. Free lunch helps too. So does free sponsored events like Tough Mudders and Marathons. Seriously, working in tech is like being a spoiled child with endless access to candy. Thank god I have some self control to not eat Haribo gummi bears every day.</p>
+
+<h4>Sitemap</h4>
+
+<p>In my last update, I showed you my first big project I deployed. Well, since then, I&rsquo;ve had even more success. For starters, I spent a good amount of time understanding SEO and sitemaps. This is probably an underlooked topic by most when it comes to the web. Mostly because it&rsquo;s a big black box at Google with countless theories. For the non-technical, it&rsquo;s like the &ldquo;yellow pages&rdquo; of your website for bots to crawl all your links. I spent a lot of time purging all the &ldquo;bad links&rdquo; from it to make Google stop hating on us.</p>
+
+<p><img class="center" src="/images/posts/2014-06-04/sitemap.png" width="290" height="165"></p>
+
+<h4>Mobile Swipe</h4>
+
+<p>This is definitely my most exciting feature that took me a few months to build and perfect. We call it &ldquo;mobile swipe&rdquo;, but it&rsquo;s our mobile web player that brings native swiping to all our presentations. It&rsquo;s responsive and works on all devices leverages several JS libraries. So far the feedback has been very good and no matter where I am, I can show people on a mobile phone or tablet what I do here.</p>
+
+<div style="text-align:center;">
+  <img src="/images/posts/2014-06-04/document_mobile_swipe.png" width="300" height="498">
+  <img src="/images/posts/2014-06-04/portrait.png" width="300" height="498">
+</div>
+
+
+<p><img class="center" src="/images/posts/2014-06-04/landscape_mobile_swipe.png" width="300" height="181"></p>
+
+<h4>Edit My Uploads</h4>
+
+<p>This is my most recent project. I redesigned our &ldquo;My Uploads&rdquo; page to be fully responsive and given it a design overhaul. We added some additional functionality to upload a Slideshare directly to your LinkedIn profile, but for the most part, we just made the page prettier.</p>
+
+<p><img class="center" src="/images/posts/2014-06-04/new_edit_uploads.png" width="503" height="607"></p>
+
+<h3>Last Words</h3>
+
+<p>I feel like if I worked at a large corporation, there&rsquo;s no way I&rsquo;d have this many successful projects under my belt in less than a year. Maybe it&rsquo;s right place, right time; maybe not. One things for sure, I still plan to make a large impact on whatever I work on because programming is awesome and I would encourage anyone else to pursue it if you feel there&rsquo;s a passion for it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[1 month update]]></title>
+    <link href="http://markleeis.me/blog/2013/08/21/1-month-update/"/>
+    <updated>2013-08-21T23:00:00-07:00</updated>
+    <id>http://markleeis.me/blog/2013/08/21/1-month-update</id>
+    <content type="html"><![CDATA[<p>I bet you thought I was going to stop updating this once I got a job! You were * <strong>almost</strong> * right&hellip;</p>
+
+<p>No, but seriously, I&rsquo;ve been really busy since starting my new job and regaining a social life. It just feels like my life is balanced again.</p>
+
+<p><img class="center" src="/images/posts/one-month/books.png" width="500" height="400"></p>
+
+<h3>Life Update</h3>
+
+<p>So I guess one would ask: <em>Mark, what the hell have you been doing since wrapping up Hack Reactor and starting at Slideshare?</em></p>
+
+<p>Well, I spent three weeks laying low and recharging my batteries after the 3 month marathon known as my tenure at Hack Reactor. Basically, a lot of sleeping in, a lot of socializing, and a good amount of reading Game of Thrones.</p>
+
+<p>Now that I&rsquo;ve started work, I&rsquo;ve slowly started to get back into the groove of a schedule and it feels really good. I&rsquo;m back playing soccer 2-3 times a week, finally gave in and joined Tinder, picked up my Vespa from my friend, and even joined a few tech meetups here and there. Despite having more free time compared to when I was at HR, I feel like I&rsquo;m more busy than ever. Maybe it&rsquo;s just the fact that I basically ignored my friends for 3 months and have been playing catch up ever since.</p>
+
+<h3>Job Update</h3>
+
+<p>Since most of my traffic comes from searches about Hack Reactor and referrals from other people&rsquo;s blogs, I&rsquo;ll get into the more important updates. I can truly say at this point that I don&rsquo;t think I could have made a better choice for a place to work. It&rsquo;s the perfect balance of cool people, cool projects, and opportunity to learn and grow.</p>
+
+<p>It was slow at first fixing small bugs to get familiar with the codebase and trying to remember how to program after taking 5 weeks off in between. I had an orientation at LinkedIn down in Mountain View for my first day. Then the following day joined my team in SF where I was told to deploy on my first day. No sweat, right? Although I was basically a monkey taking directions, I was able to knock it out of the park.</p>
+
+<p>What I&rsquo;ve realized after 4 weeks of being a full-time programmer is the following:</p>
+
+<ul>
+<li>There&rsquo;s A LOT of code I didn&rsquo;t write. I spend a good amount of time tracing functions/callbacks all over the place</li>
+<li>The huge importance of writing tests to cover the previous realization</li>
+<li>Thank god I know a decent amount of git and BASH</li>
+<li>Pixel perfect designs are really important!!!</li>
+<li>Mobile responsiveness and Google Analytics are critical things to have working properly</li>
+</ul>
+
+
+<p>And on a less serious note:</p>
+
+<ul>
+<li>I&rsquo;m not particularly good at foosball when spinning is involved</li>
+<li>Free soft drinks, beef jerky, and gummi bears are going to be the death of me</li>
+<li>Perks at a big company are awesome</li>
+<li>You do 20 pushups everytime your deploy breaks the site. &mdash; I&rsquo;ve done 40 so far</li>
+</ul>
+
+
+<h3>My First Change</h3>
+
+<p>It took me a while, but my first &ldquo;real&rdquo; addition to the site is a share modal to share slideshows across your networks. My team is responsible for revamping the consumer experience for Slideshare, and we hope the new designs we&rsquo;re rolling out will improve the browse and share the experiences for our logged in users. You can find my new modal by clicking the &ldquo;Share&rdquo; button on a presentation <a href="http://www.slideshare.net/newlist/featured">here</a>.</p>
+
+<p><img class="center" src="/images/posts/one-month/modal-share.png" width="700" height="600"></p>
+
+<p>Well, there&rsquo;s the update for now. I&rsquo;ll keep alternating between technical and non-technical posts in the future.</p>
+]]></content>
+  </entry>
+  
+</feed>
